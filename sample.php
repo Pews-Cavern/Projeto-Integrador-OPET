@@ -25,7 +25,7 @@
     <nav class="nav">
         <ul class="pt-5">
             <li><a href="../index.php">Home</a></li>
-            <li><a href="">WIP</a></li>
+            <li><a href="../index.php">Sobre nós</a></li>
             <li><a href="">WIP</a></li>
             <li><a href="">WIP</a></li>
         </ul>
