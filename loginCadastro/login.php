@@ -11,8 +11,8 @@
 
 <body class="d-flex align-items-center py-4 px-5">
 
-    <main class="w-100 border border-primary p-3">
-        <div class="container border border-seconday" id="container1">
+    <main class="w-100 p-3">
+        <div class="container" id="container1">
             <form>
                 <div id="div">
                     <img src="../assets/logo.png" alt="logo">
