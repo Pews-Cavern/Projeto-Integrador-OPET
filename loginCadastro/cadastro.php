@@ -21,13 +21,13 @@
                         <input type="text" class="form-control" placeholder="Usuário" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="Email" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Senha" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="password" class="form-control" placeholder="Senha" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Confirmar senha" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="password" class="form-control" placeholder="Confirmar senha" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
 
                 </div>
