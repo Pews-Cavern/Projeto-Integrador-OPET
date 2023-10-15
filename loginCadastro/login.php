@@ -13,7 +13,7 @@
 
     <main class="w-100 p-3">
         <div class="container" id="container1">
-            <form>
+            <form action="">
                 <div id="div">
                     <img src="../assets/logo.png" alt="logo">
                 </div>
@@ -58,3 +58,5 @@
 </body>
 
 </html>
+
+<?php ?>
