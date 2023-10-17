@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(241, 241, 241);
+}
+
+#container1 {
+    width: 500px;
+}
+img {
+    width: 110px;
+
+}
+#div {
+    text-align: center;
+}
+main {
+    margin-top: 60px;
+}
+@media (max-width:1040px) {
+    #container1 {
+        width: auto;
+    }
+}
+
