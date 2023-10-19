@@ -4,7 +4,7 @@
 
 ## Descrição
 
-O "Produtos do Futuro" é um projeto acadêmico desenvolvido como parte do Projeto Integrador do 2º Semestre (PI2) do curso de Tecnologia em Análise e Desenvolvimento de Sistemas da UniOpet. O projeto visa criar uma plataforma inovadora que conecta estudantes universitários a oportunidades de adquirir experiência em suas áreas de estudo, ao mesmo tempo em que oferece serviços acessíveis a indivíduos e empresas.
+O "Produtos do Futuro" é um projeto acadêmico desenvolvido como parte do Projeto Integrador do 2º Semestre (PI2) do curso de Tecnologia em Análise e Desenvolvimento de Sistemas da UniOpet. O projeto visa criar uma plataforma inovadora que conecta estudantes universitários a oportunidades de adquirir experiência em suas áreas de estudo, ao mesmo tempo em que oferece serviços acessíveis a indivíduos e empresas
 
 ## Tecnologias Utilizadas
 
