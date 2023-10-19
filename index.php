@@ -17,7 +17,7 @@
 <style>
     * {
         margin: 0px;
-        padding: 0px
+        padding: 0px;
     }
 
     header {
@@ -98,7 +98,7 @@
         background-repeat: no-repeat;
         background-size: contain;
         width: 50%;
-        height: 500px;
+        height: 486px;
     }
 
     div.bottomPartWhatYouSearchingFor div.comprador {
