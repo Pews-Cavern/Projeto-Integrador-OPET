@@ -13,18 +13,18 @@
 
     <main class="w-100 p-3">
         <div class="container" id="container1">
-            <form action="">
+            <form action="login.php" method="post">
                 <div id="div">
                     <img src="../assets/logo.png" alt="logo">
                 </div>
                 <!--inputs-->
                 <div class="row">
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
                         <label for="floatingInput">Email address</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <input type="password" class="form-control" name="pw" id="floatingPassword" placeholder="Password">
                         <label for="floatingPassword">Password</label>
                     </div>
                     <div class="container">
@@ -32,9 +32,7 @@
                             <div class="col-6">
                                 <div class="form-check" id="botaoLogin">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Lembrar Login
-                                    </label>
+                                    <label class="form-check-label" for="flexCheckDefault">Lembrar Login</label>
                                 </div>
                             </div>
                             <div class="col-6 text-end">
@@ -43,7 +41,7 @@
                         </div>
                     </div>
                     <!--submit-->
-                    <input class="btn btn-primary mt-3" type="submit" value="Entrar" id="button">
+                    <input class="btn btn-primary mt-3" type="submit" name="logar" value="Entrar" id="button">
                 </div>
             </form>
             <div class="container mt-5">
@@ -59,4 +57,25 @@
 
 </html>
 
-<?php ?>
+<?php 
+include "config.php";
+if(isset($_POST['logar'])){
+    $email=$_POST['email'];
+    $pw=MD5($_POST['pw']);
+    
+    $login = $conn->prepare('SELECT * FROM login WHERE email_log = :email AND pw_log=:pw');
+        $login->bindValue(":email", $email);
+        $login->bindValue(":pw", $pw);
+        $login->execute();
+        if($login->rowCount()==0){
+            echo "Login ou senha invalida!";
+        }
+        else{
+            $cons=$login->fetch();
+            $id=$cons['id_log'];
+            session_start();
+            $_SESSION['login']=$id;
+            header("location: teste.php");
+        }
+}
+?>
