@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=League+Gothic&family=Nunito:wght@700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="img/png" href="./assets/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -38,7 +41,7 @@
     }
 
     div.bottomText {
-        margin: 100px;
+        margin: 8rem;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -82,10 +85,6 @@
     h3 {
         color: black;
 
-    }
-
-    div.title h3 {
-        margin-left: 15px
     }
 
     div.bottomPartWhatYouSearchingFor {
@@ -134,6 +133,50 @@
         text-align: center;
         color: #B8B8B8;
     }
+
+    h1{
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 7rem;
+    }
+    
+    h3{
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 1rem;
+        margin-left: 5rem;
+    }
+
+    h2{
+        font-family: 'Bebas Neue', sans-serif;
+    }
+
+    p{
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 1.2rem;
+    }
+
+    .textCard{
+        margin: 1rem 0 0 0;
+    }
+
+    svg{
+        margin: .5rem 0 0 1rem;
+    }
+
+    button{
+        background-color: green;
+    }
+
+    p.talentos{
+        font-family: 'Bebas Neue', sans-serif;
+    }
+
+    .algumaImg{
+        border-top-right-radius: .8rem;
+        border-bottom-right-radius: .8rem;
+
+        box-shadow: 1px .5px 10px black;
+    }
+
 </style>
 
 <body>
@@ -157,7 +200,7 @@
     <div class="bottomText">
         <p>Acreditamos que cada estudante merece acesso simplificado a oportunidades profissionais relevantes e
             enriquecedoras. <br> Participe conosco dessa jornada entre jovens talentos e o mundo profissional!</p>
-        <img src="https://fakeimg.pl/250x150/?retina=1&text=Input Image Here">
+        <img class="algumaImg" src="https://fakeimg.pl/250x150/?retina=1&text=Input Image Here">
     </div>
     <div class="cardsBottom">
         <div class="rowTop">
@@ -183,7 +226,7 @@
                     </svg>
                     <h3>Perfil Personalizado</h3>
                 </div>
-                <p>Com a Produtos do Futuro, estudantes têm perfil detalhado destacando suas habilidades,
+                <p class="textCard">Com a Produtos do Futuro, estudantes têm perfil detalhado destacando suas habilidades,
                     experiências e
                     interesses específicos para conseguir uma oportunidade no ambiente de trabalho</p>
             </div>
@@ -222,7 +265,7 @@
 
                     <h3>Comunidade de confiança</h3>
                 </div>
-                <p>Atráves da internet intuitiva, estudantes e empregadores se encontram com base de critérios como
+                <p class="textCard">Atráves da internet intuitiva, estudantes e empregadores se encontram com base de critérios como
                     localização, tipo de contrato, habilidades necessárias e muito mais!</p>
             </div>
             <!-- a -->
@@ -249,7 +292,7 @@
 
                     <h3>Filtragem avançada</h3>
                 </div>
-                <p>Através da interface intuitiva, estudantes e empregadores se encontram com base de critérios como
+                <p class="textCard">Através da interface intuitiva, estudantes e empregadores se encontram com base de critérios como
                     localização, tipo de contrato, habilidades necessárias e muito mais!</p>
             </div>
             <!-- a -->
@@ -298,7 +341,7 @@
 
                     <h3>Feed inteligente</h3>
                 </div>
-                <p>Utilizando algoritmos avançados, sugerimos em tempo real oportunidades de emprego relevantes para
+                <p class="textCard">Utilizando algoritmos avançados, sugerimos em tempo real oportunidades de emprego relevantes para
                     cada estudante, aumentando as chances de encontrar aquela vaga 10/10!</p>
             </div>
             <!-- a -->
@@ -310,7 +353,7 @@
     <div class="bottomPartWhatYouSearchingFor">
         <div class="img">
             <div class="centerThings">
-                <p>Procuto talentos</p>
+                <p class="talentos">Procuto talentos</p>
                 <h3>ENCONTRE TALENTOS AGORA</h3>
                 <button type="button" class="btn btn-success">Encontre Talentos</button>
             </div>
