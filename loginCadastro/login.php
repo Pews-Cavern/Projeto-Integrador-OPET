@@ -96,21 +96,13 @@ if (isset($_POST['logar'])) {
 <script>
     document.querySelector("form").addEventListener("submit", function (event) {
         event.preventDefault();
-        checkPw();
-    });
-
-    function checkPw() {
-        const result = <?php echo $errType; ?>;
-        if (result == 1) {
-            document.getElementById("err").style.display = "block";
-        } else {
-            document.getElementById("err").style.display = "none";
-        }
-
+         const result = <?php echo $errType; ?> == 1 ?  document.getElementById("err").style.display = "block" :  document.getElementById("err").style.display = "none";
         setTimeout(() => {
             document.getElementById("err").style.display = "none";
         }, 8 * 100)
-    }
+    });
+
+    
 </script>
 
 </html>
