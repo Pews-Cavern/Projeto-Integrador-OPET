@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 19/10/2023 às 15:09
+-- Tempo de geração: 20/10/2023 às 15:46
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -41,7 +41,9 @@ CREATE TABLE `login` (
 INSERT INTO `login` (`id_log`, `nome_log`, `email_log`, `pw_log`) VALUES
 (5, 'aaa', 'aaa@aaa.aaa', '594f803b380a41396ed63dca39503542'),
 (6, 'Elias carteiro', 'elias.carteiro@gmail.com', 'b42916ff190bdf3faa20e944e5e49737'),
-(7, 'bibi perigosa', 'linda.bonita@gmail.com', 'a4a98bf778bb7cb05ae3f6e1e3666a49');
+(7, 'bibi perigosa', 'linda.bonita@gmail.com', 'a4a98bf778bb7cb05ae3f6e1e3666a49'),
+(8, 'Antony teste 1', 'testedefogo@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055'),
+(9, 'Antonio nunes', 'antonio.nunes@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055');
 
 --
 -- Índices para tabelas despejadas
@@ -61,7 +63,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT de tabela `login`
 --
 ALTER TABLE `login`
-  MODIFY `id_log` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_log` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
