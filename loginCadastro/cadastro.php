@@ -18,44 +18,33 @@
     <main class="w-100 p-3">
 
         <div class="container" id="container1">
-            <form action="">
+            <form action="cadastro.php" method="post">
                 <div class="row">
                     <div id="div">
                         <img src="../assets/logo.png" alt="logo">
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" name="pw" id="floatingPassword"
-                            placeholder="Password">
-                        <label for="floatingPassword">
-                            <p class="place">Usuario</p>
-                        </label>
+                        <input type="text" class="form-control" name="nome"
+                            placeholder="Usuário">
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" name="pw" id="floatingPassword"
-                            placeholder="Password">
-                        <label for="floatingPassword">
-                            <p class="place">Email</p>
-                        </label>
+                        <input type="text" class="form-control" name="email" i
+                            placeholder="Email">
                     </div>
 
 
 
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" name="pw" id="floatingPassword"
-                            placeholder="Password">
-                        <label for="floatingPassword">
-                            <p class="place">Senha</p>
-                        </label>
+                        <input type="password" class="form-control" name="pw1"
+                            placeholder="Senha">
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" name="pw" id="floatingPassword"
-                            placeholder="Password">
-                        <label for="floatingPassword">
-                            <p class="place">Confirmar Senha</p>
-                        </label>
+                        <input type="password" class="form-control" name="pw2"
+                            placeholder="Confirmar Senha">
+                  
                     </div>
 
 
@@ -82,4 +71,34 @@
 
 </html>
 
-<?php ?>
+<?php
+include "config.php";
+
+if (isset($_POST['grava'])) {
+    if (isset($_POST['pw1']) && isset($_POST['pw2'])) {
+        $pw1 = $_POST['pw1'];
+        $pw2 = $_POST['pw2'];
+
+        if ($pw1 !== $pw2) {
+            echo "As senhas devem ser iguais";//<---- Mudar isso ASAP TODO
+        } else {
+
+            $nome = $_POST['nome'];
+            $email = $_POST['email'];
+            $pw = md5($pw1);
+
+            if (!empty($nome) && !empty($email) && !empty($pw)) {
+
+                $grava = $conn->prepare('INSERT INTO `login`(`id_log`, `nome_log`, `email_log`, `pw_log`) VALUES (NULL, :pnome, :pemail, :ppw)');
+                $grava->bindValue(':pnome', $nome);
+                $grava->bindValue(':pemail', $email);
+                $grava->bindValue(':ppw', $pw);
+                $grava->execute();
+                header("location: login.php");
+            } else {
+                echo "Por favor preencha todos os campos corretamente";//<---- Mudar isso ASAP TODO
+            }
+        }
+    }
+}
+?>
