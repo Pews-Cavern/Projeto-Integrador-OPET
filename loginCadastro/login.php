@@ -46,7 +46,7 @@
             </form>
             <div class="container mt-5">
                 <div class="row">
-                    <p class="text-center">Ainda não tem uma conta?<a href="#"> Cadastre-se!</a></p>
+                    <p class="text-center">Ainda não tem uma conta?<a href="cadastro.php"> Cadastre-se!</a></p>
                 </div>
             </div>
         </div>
