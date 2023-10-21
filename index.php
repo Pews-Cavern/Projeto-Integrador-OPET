@@ -6,7 +6,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=League+Gothic&family=Nunito:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=League+Gothic&family=Nunito:wght@700&display=swap"
+        rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="img/png" href="./assets/logo.png">
@@ -137,11 +139,11 @@
     }
 
 
-    h1{
+    h1 {
         font-family: 'Bebas Neue', sans-serif;
         font-size: 7rem;
     }
-    
+
 
 
     h3 {
@@ -152,34 +154,34 @@
     }
 
 
-    h2{
+    h2 {
         font-family: 'Bebas Neue', sans-serif;
     }
 
-    p{
+    p {
 
         font-family: 'Bebas Neue', sans-serif;
         font-size: 1.2rem;
     }
 
 
-    .textCard{
+    .textCard {
         margin: 1rem 0 0 0;
     }
 
-    svg{
+    svg {
         margin: .5rem 0 0 1rem;
     }
 
-    button{
+    button {
         background-color: green;
     }
 
-    p.talentos{
+    p.talentos {
         font-family: 'Bebas Neue', sans-serif;
     }
 
-    .algumaImg{
+    .algumaImg {
         border-top-right-radius: .8rem;
         border-bottom-right-radius: .8rem;
 
@@ -239,8 +241,6 @@
     a {
         font-family: 'Bebas Neue', sans-serif;
     }
-
-
 </style>
 
 <body>
@@ -290,7 +290,9 @@
                     </svg>
                     <h3>Perfil Personalizado</h3>
                 </div>
-                <p class="textCard">Com a Produtos do Futuro, estudantes têm perfil detalhado destacando suas habilidades, experiências e interesses específicos para conseguir uma oportunidade no ambiente de trabalho</p>
+                <p class="textCard">Com a Produtos do Futuro, estudantes têm perfil detalhado destacando suas
+                    habilidades, experiências e interesses específicos para conseguir uma oportunidade no ambiente de
+                    trabalho</p>
             </div>
             <!-- a -->
 
@@ -328,7 +330,8 @@
                     <h3>Comunidade de confiança</h3>
                 </div>
 
-                <p class="textCard">Atráves da internet intuitiva, estudantes e empregadores se encontram com base de critérios como localização, tipo de contrato, habilidades necessárias e muito mais!</p>
+                <p class="textCard">Atráves da internet intuitiva, estudantes e empregadores se encontram com base de
+                    critérios como localização, tipo de contrato, habilidades necessárias e muito mais!</p>
             </div>
             <!-- a -->
         </div>
@@ -355,7 +358,8 @@
                     <h3>Filtragem avançada</h3>
                 </div>
 
-                <p class="textCard">Através da interface intuitiva, estudantes e empregadores se encontram com base de critérios como localização, tipo de contrato, habilidades necessárias e muito mais!</p>
+                <p class="textCard">Através da interface intuitiva, estudantes e empregadores se encontram com base de
+                    critérios como localização, tipo de contrato, habilidades necessárias e muito mais!</p>
             </div>
             <!-- a -->
 
@@ -404,7 +408,8 @@
                     <h3>Feed inteligente</h3>
                 </div>
 
-                <p class="textCard">Utilizando algoritmos avançados, sugerimos em tempo real oportunidades de emprego relevantes para  cada estudante, aumentando as chances de encontrar aquela vaga 10/10!</p>
+                <p class="textCard">Utilizando algoritmos avançados, sugerimos em tempo real oportunidades de emprego
+                    relevantes para cada estudante, aumentando as chances de encontrar aquela vaga 10/10!</p>
             </div>
             <!-- a -->
         </div>

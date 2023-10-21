@@ -33,3 +33,15 @@ main {
     width: 500px;
     align-items: start;
 }
+
+#x {
+    position: absolute;
+    background: gray;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border-color: transparent;
+    top: 10px;
+    right: 10px;
+}

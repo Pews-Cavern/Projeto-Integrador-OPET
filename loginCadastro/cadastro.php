@@ -10,19 +10,6 @@
     <link rel="icon" type="img/png" href="../assets/logo.png">
     <title>Produtos do Futuro</title>
 </head>
-<style>
-    #x {
-        position: absolute;
-        background: gray;
-        color: white;
-        height: 40px;
-        width: 40px;
-        border-radius: 100%;
-        border-color: transparent;
-        top: 10px;
-        right: 10px;
-    }
-</style>
 
 <body>
 
@@ -36,36 +23,48 @@
         <main class="w-100 p-3">
 
             <div class="container" id="container1">
-                <form action="cadastro.php" method="post">
+                <form action="./cadastro.php" method="post">
                     <div class="row">
                         <div id="div">
                             <img src="../assets/logo.png" alt="logo">
                         </div>
-
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="nome" placeholder="Usuário">
+                            <input type="text" class="form-control" name="nome" id="usuario" placeholder="Usuário">
+                            <label for="usuario">
+                                <p class="place">Usuário</p>
+                            </label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                            <label for="email">
+                                <p class="place">Email</p>
+                            </label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" name="pw1" id="senha" placeholder="Senha">
+                            <label for="senha">
+                                <p class="place">Senha</p>
+                            </label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="email" i placeholder="Email">
+                            <input type="password" class="form-control" name="pw2" id="senha1"
+                                placeholder="Confirmar Senha">
+                            <label for="senha1">
+                                <p class="place">Confirmar Senha</p>
+                            </label>
                         </div>
 
 
 
-                        <div class="form-floating mb-3">
-                            <input type="password" class="form-control" name="pw1" placeholder="Senha">
-                        </div>
 
-                        <div class="form-floating mb-3">
-                            <input type="password" class="form-control" name="pw2" placeholder="Confirmar Senha">
 
-                        </div>
 
 
                     </div>
                     <!--submit-->
 
-                    <input class="btn btn-primary mt-3 mx-auto" type="submit" value="Entrar" id="button">
+                    <input class="btn btn-primary mt-3 mx-auto" type="submit" value="Cadastrar" id="button">
 
                 </form>
                 <div class="container bottomPart">
@@ -83,12 +82,18 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 </body>
-
-</html>
-
 <?php
 include "config.php";
+function debug_to_console($data)
+{
+    $output = $data;
+    if (is_array($output))
+        $output = implode(',', $output);
 
+    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+}
+
+debug_to_console("Test");
 if (isset($_POST['grava'])) {
     if (isset($_POST['pw1']) && isset($_POST['pw2'])) {
         $pw1 = $_POST['pw1'];
@@ -96,6 +101,7 @@ if (isset($_POST['grava'])) {
 
         if ($pw1 !== $pw2) {
             echo "As senhas devem ser iguais"; //<---- Mudar isso ASAP TODO
+
         } else {
 
             $nome = $_POST['nome'];
@@ -117,3 +123,5 @@ if (isset($_POST['grava'])) {
     }
 }
 ?>
+
+</html>
