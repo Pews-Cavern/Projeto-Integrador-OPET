@@ -11,57 +11,67 @@
     <title>Produtos do Futuro</title>
 </head>
 
-<body class="d-flex align-items-center py-4 px-5">
 
-    <main class="w-100 p-3">
-        <div class="container" id="container1">
-            <form action="login.php" method="post">
-                <div id="div">
-                    <img src="../assets/logo.png" alt="logo">
-                </div>
-                <!--inputs-->
-                <div class="row">
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" name="email" id="floatingInput"
-                            placeholder="name@example.com">
-                        <label for="floatingInput">
-                            <p class="place">Email</p>
-                        </label>
+<body>
+
+    <button onclick="location.href='../index.php'" class="esc">
+        X
+    </button>
+
+
+
+    <div class="d-flex align-items-center py-4 px-5">
+        <main class="w-100 p-3">
+            <div class="container" id="container1">
+                <form action="login.php" method="post">
+                    <div id="div">
+                        <img src="../assets/logo.png" alt="logo">
                     </div>
+                    <!--inputs-->
+                    <div class="row">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" name="email" id="floatingInput"
+                                placeholder="name@example.com">
+                            <label for="floatingInput">
+                                <p class="place">Email</p>
+                            </label>
+                        </div>
 
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" name="pw" id="floatingPassword"
-                            placeholder="Password">
-                        <label for="floatingPassword">
-                            <p class="place">Senha</p>
-                        </label>
-                    </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" name="pw" id="floatingPassword"
+                                placeholder="Password">
+                            <label for="floatingPassword">
+                                <p class="place">Senha</p>
+                            </label>
+                        </div>
 
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="form-check" id="botaoLogin">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">Lembrar Login</label>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-check" id="botaoLogin">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">Lembrar Login</label>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <a href="#">Esqueci minha senha</a>
                                 </div>
                             </div>
-                            <div class="col-6 text-end">
-                                <a href="#">Esqueci minha senha</a>
-                            </div>
                         </div>
+                        <!--submit-->
+                        <input class="btn btn-primary mt-3" type="submit" name="logar" value="Entrar" id="button">
                     </div>
-                    <!--submit-->
-                    <input class="btn btn-primary mt-3" type="submit" name="logar" value="Entrar" id="button">
+                </form>
+                <div class="container bottomPart">
+                    <p class="text-center">Ainda não tem uma conta? | <a
+                            href="../loginCadastro/cadastro.php">Cadastre-se!</a>
+                    </p>
                 </div>
-            </form>
-            <div class="container bottomPart">
-                <p class="text-center">Ainda não tem uma conta? | <a
-                        href="../loginCadastro/cadastro.php">Cadastre-se!</a>
-                </p>
+                <p id="err">Login ou senha invalida</p>
             </div>
-            <p id="err">Login ou senha invalida</p>
-        </div>
-    </main>
+        </main>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -96,13 +106,13 @@ if (isset($_POST['logar'])) {
 <script>
     document.querySelector("form").addEventListener("submit", function (event) {
         event.preventDefault();
-         const result = <?php echo $errType; ?> == 1 ?  document.getElementById("err").style.display = "block" :  document.getElementById("err").style.display = "none";
+        const result = <?php echo $errType; ?> == 1 ? document.getElementById("err").style.display = "block" : document.getElementById("err").style.display = "none";
         setTimeout(() => {
             document.getElementById("err").style.display = "none";
         }, 8 * 100)
     });
 
-    
+
 </script>
 
 </html>

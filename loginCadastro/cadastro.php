@@ -10,57 +10,72 @@
     <link rel="icon" type="img/png" href="../assets/logo.png">
     <title>Produtos do Futuro</title>
 </head>
+<style>
+    #x {
+        position: absolute;
+        background: gray;
+        color: white;
+        height: 40px;
+        width: 40px;
+        border-radius: 100%;
+        border-color: transparent;
+        top: 10px;
+        right: 10px;
+    }
+</style>
+
+<body>
+
+    <button onclick="location.href='../index.php'" id="x">
+        X
+    </button>
+
+    <div class="d-flex align-items-center py-4 px-5">
 
 
-<body class="d-flex align-items-center py-4 px-5">
+        <main class="w-100 p-3">
+
+            <div class="container" id="container1">
+                <form action="cadastro.php" method="post">
+                    <div class="row">
+                        <div id="div">
+                            <img src="../assets/logo.png" alt="logo">
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="nome" placeholder="Usuário">
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="email" i placeholder="Email">
+                        </div>
 
 
-    <main class="w-100 p-3">
 
-        <div class="container" id="container1">
-            <form action="cadastro.php" method="post">
-                <div class="row">
-                    <div id="div">
-                        <img src="../assets/logo.png" alt="logo">
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" name="pw1" placeholder="Senha">
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" name="pw2" placeholder="Confirmar Senha">
+
+                        </div>
+
+
                     </div>
+                    <!--submit-->
 
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" name="nome"
-                            placeholder="Usuário">
-                    </div>
+                    <input class="btn btn-primary mt-3 mx-auto" type="submit" value="Entrar" id="button">
 
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" name="email" i
-                            placeholder="Email">
-                    </div>
-
-
-
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" name="pw1"
-                            placeholder="Senha">
-                    </div>
-
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" name="pw2"
-                            placeholder="Confirmar Senha">
-                  
-                    </div>
-
-
+                </form>
+                <div class="container bottomPart">
+                    <p class="text-center">Já possui uma conta? | <a href="../loginCadastro/login.php">Entre!</a>
+                    </p>
                 </div>
-                <!--submit-->
-
-                <input class="btn btn-primary mt-3 mx-auto" type="submit" value="Entrar" id="button">
-
-            </form>
-            <div class="container bottomPart">
-                <p class="text-center">Já possui uma conta? | <a href="../loginCadastro/login.php">Entre!</a>
-                </p>
             </div>
-        </div>
 
-    </main>
+        </main>
+    </div>
 
 
 
@@ -80,7 +95,7 @@ if (isset($_POST['grava'])) {
         $pw2 = $_POST['pw2'];
 
         if ($pw1 !== $pw2) {
-            echo "As senhas devem ser iguais";//<---- Mudar isso ASAP TODO
+            echo "As senhas devem ser iguais"; //<---- Mudar isso ASAP TODO
         } else {
 
             $nome = $_POST['nome'];
@@ -96,7 +111,7 @@ if (isset($_POST['grava'])) {
                 $grava->execute();
                 header("location: login.php");
             } else {
-                echo "Por favor preencha todos os campos corretamente";//<---- Mudar isso ASAP TODO
+                echo "Por favor preencha todos os campos corretamente"; //<---- Mudar isso ASAP TODO
             }
         }
     }

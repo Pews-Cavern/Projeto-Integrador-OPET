@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(41, 0, 0);
 }
 
 p#err {
@@ -11,6 +11,7 @@ p#err {
 #container1 {
     width: 500px;
 }
+
 
 img {
     width: 150px;
@@ -38,7 +39,17 @@ main {
     padding-left: 15px;
 }
 
-
+.esc {
+    position: absolute;
+    background: gray;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border-color: transparent;
+    top: 10px;
+    right: 10px;
+}
 
 @media (max-width:1040px) {
     #container1 {
