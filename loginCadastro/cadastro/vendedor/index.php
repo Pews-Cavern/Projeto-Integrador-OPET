@@ -19,7 +19,7 @@
 
     main {
         height: fit-content;
-        padding: 50px;
+        padding: 50px 50px 0px 50px;
         width: 50%;
         background-color: #dcf7df;
         position: absolute;
@@ -41,41 +41,47 @@
     }
 
     .bottomPart {
-        margin-top: 50px;
-
+        margin-top: 20px;
     }
 </style>
 
 <body>
 
     <main>
+
         <img src="../../../assets/logo.png" alt="logo" class="logo">
         <h1>Cadastro Vendedor</h1>
-        <div class="form-floating mb-2">
-            <input type="text" class="form-control" name="Nome" id="Nome" placeholder="Nome">
-            <label for="Nome">
-                <p class="place">Nome Completo</p>
-            </label>
-        </div>
-        <div class="form-floating mb-2">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-            <label for="email">
-                <p class="place">Email</p>
-            </label>
-        </div>
-        <div class="form-floating mb-2">
-            <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha">
-            <label for="senha">
-                <p class="place">Senha</p>
-            </label>
-        </div>
-
-
-        <input class="btn btn-primary mt-3 mx-auto" type="submit" value="Cadastrar" name="gravar" id="button">
-        <div class="container bottomPart">
-            <p class="text-center">Já possui uma conta? | <a href="../../login.php">Entre!</a>
-            </p>
-        </div>
+        <form action="./index.php" method="post">
+            <div class="form-floating mb-2">
+                <input type=" text" class="form-control" name="name" id="Nome" placeholder="Nome">
+                <label for="Nome">
+                    <p class="place">Nome Completo</p>
+                </label>
+            </div>
+            <div class="form-floating mb-2">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                <label for="email">
+                    <p class="place">Email</p>
+                </label>
+            </div>
+            <div class="form-floating mb-2">
+                <input type="password" class="form-control" name="password" id="senha" placeholder="Senha">
+                <label for="senha">
+                    <p class="place">Senha</p>
+                </label>
+            </div>
+            <div class="form-floating mb-2">
+                <input type="password" class="form-control" name="password-2" id="senha2" placeholder="Senha">
+                <label for="senha2">
+                    <p class="place">Confirmar Senha</p>
+                </label>
+            </div>
+            <input class="btn btn-primary mt-3 mx-auto" type="submit" value="Cadastrar" name="gravar" id="button">
+            <div class="container bottomPart">
+                <p class="text-center">Já possui uma conta? | <a href="../../login.php">Entre!</a>
+                </p>
+            </div>
+        </form>
     </main>
 
 
@@ -83,5 +89,35 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 </body>
+
+
+<?php
+include "../../../util/config.php";
+
+if (isset($_POST['gravar'])) {
+    echo "EAE";
+    if (isset($_POST['password']) && isset($_POST['password-2'])) {
+        $pw1 = $_POST['password'];
+        $pw2 = $_POST['password-2'];
+        if ($pw1 !== $pw2) {
+            echo "As senhas devem ser iguais"; //<---- Mudar isso ASAP TODO
+        } else {
+            $nome = $_POST['name'];
+            $email = $_POST['email'];
+            $pw = md5($pw1);
+            if (!empty($nome) && !empty($email) && !empty($pw)) {
+                $grava = $conn->prepare('INSERT INTO `login`(`id_log`, `nome_log`, `email_log`, `pw_log`) VALUES (NULL, :pnome, :pemail, :ppw)');
+                $grava->bindValue(':pnome', $nome);
+                $grava->bindValue(':pemail', $email);
+                $grava->bindValue(':ppw', $pw);
+                $grava->execute();
+                // header("location: ./infoAdicional/index.php");
+            } else {
+                echo "Por favor preencha todos os campos corretamente"; //<---- Mudar isso ASAP TODO
+            }
+        }
+    }
+}
+?>
 
 </html>

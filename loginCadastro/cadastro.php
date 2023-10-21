@@ -65,7 +65,7 @@
         crossorigin="anonymous"></script>
 </body>
 <?php
-include "config.php";
+include "./../util/config.php";
 if (isset($_POST['gravar'])) {
     if (isset($_POST['pw1']) && isset($_POST['pw2'])) {
         $pw1 = $_POST['pw1'];
