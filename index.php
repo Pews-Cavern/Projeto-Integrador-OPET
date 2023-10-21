@@ -42,6 +42,7 @@
 
     p {
         font-size: medium;
+        color: black;
     }
 
     div.bottomText {
@@ -85,33 +86,7 @@
 
 
 
-    div.bottomPartWhatYouSearchingFor {
-        display: flex;
-        flex-direction: row;
-    }
 
-    div.bottomPartWhatYouSearchingFor div.img {
-        display: flex;
-        background: url('./assets/vendedorPlaceholder.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 50%;
-        height: 486px;
-    }
-
-    div.bottomPartWhatYouSearchingFor div.comprador {
-        background: url('./assets/compradorPlaceholder.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-
-
-    div.img div.centerThings {
-        display: flex;
-        margin: auto auto;
-        flex-direction: column;
-        text-align: center;
-    }
 
     div.centerThings h3 {
         font-family: 'Montserrat';
@@ -145,6 +120,7 @@
         font-family: 'Bebas Neue', sans-serif;
         margin-top: 1rem;
         margin-left: 5rem;
+        color: black;
     }
 
 
@@ -161,6 +137,7 @@
 
     .textCard {
         margin: 1rem 0 0 0;
+        color: black;
     }
 
     svg {
@@ -171,9 +148,7 @@
         background-color: green;
     }
 
-    p.talentos {
-        font-family: 'Bebas Neue', sans-serif;
-    }
+
 
     .algumaImg {
         border-top-right-radius: .8rem;
@@ -185,6 +160,10 @@
 
     footer {
         background-color: black;
+    }
+
+    footer * {
+        color: white;
     }
 
     div.bgFooter {
@@ -235,6 +214,50 @@
     a {
         font-family: 'Bebas Neue', sans-serif;
     }
+
+    div.logon {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    div.singin {
+        background-image: url("./assets/vendedorPlaceholder.png");
+
+        background-size: cover;
+        background-position: center;
+        width: 50%;
+        height: 450px;
+        display: flex;
+
+
+    }
+
+    div.singup {
+        background-image: url("./assets/compradorPlaceholder.png");
+        background-size: cover;
+        background-position: center;
+        width: 50%;
+        height: 450px;
+        display: flex;
+    }
+
+    p#logon {
+        text-align: center;
+        margin: auto;
+        color: black;
+    }
+
+    div.text {
+        background-color: white;
+        padding: 5px;
+        text-align: center;
+        margin: auto;
+        height: fit-content;
+        width: 150px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
 </style>
 
 <body>
@@ -250,7 +273,8 @@
     </nav>
     <header>
         <h1>Produtos do Futuro</h1>
-        <p>Seja bem-vindo à Produtos do Futuro, onde acreditamos que cada estudante merece acesso simplificado a
+        <p style="color:white">Seja bem-vindo à Produtos do Futuro, onde acreditamos que cada estudante merece acesso
+            simplificado a
             oportunidades profissionais!</p>
     </header>
     <h2>Tudo que você precisa para <span style="color: green;">trabalhar</span> ou <span
@@ -409,26 +433,18 @@
         </div>
     </div>
 
-
-
-    <div class="bottomPartWhatYouSearchingFor">
-        <div class="img">
-            <div class="centerThings">
-                <p class="talentos">Procuto talentos</p>
-                <h3>ENCONTRE TALENTOS AGORA</h3>
-                <a type="button" href="./loginCadastro/login.php" class="btn btn-success">Encontre Talentos</a>
+    <div class="logon">
+        <div class="singin">
+            <div class="text" onclick="location.href='./loginCadastro/index.php'">
+                <p id="logon">Cadastre-se</p>
             </div>
         </div>
 
-        <div class="img comprador">
-            <div class="centerThings">
-                <p>Procuto trabalho</p>
-                <h3>ENCONTRE TRABALHO AGORA</h3>
-                <a type="button" href="./loginCadastro/login.php" class="btn btn-success">Quero trabalhar</a>
-
+        <div class="singup">
+            <div class="text" onclick="location.href='./loginCadastro/login.php'">
+                <p id="logon">Login</p>
             </div>
         </div>
-
     </div>
 
 

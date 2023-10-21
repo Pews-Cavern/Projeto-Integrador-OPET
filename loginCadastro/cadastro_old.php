@@ -70,16 +70,13 @@ if (isset($_POST['gravar'])) {
     if (isset($_POST['pw1']) && isset($_POST['pw2'])) {
         $pw1 = $_POST['pw1'];
         $pw2 = $_POST['pw2'];
-
         if ($pw1 !== $pw2) {
             echo "As senhas devem ser iguais"; //<---- Mudar isso ASAP TODO
         } else {
             $nome = $_POST['nome'];
             $email = $_POST['email'];
             $pw = md5($pw1);
-
             if (!empty($nome) && !empty($email) && !empty($pw)) {
-
                 $grava = $conn->prepare('INSERT INTO `login`(`id_log`, `nome_log`, `email_log`, `pw_log`) VALUES (NULL, :pnome, :pemail, :ppw)');
                 $grava->bindValue(':pnome', $nome);
                 $grava->bindValue(':pemail', $email);

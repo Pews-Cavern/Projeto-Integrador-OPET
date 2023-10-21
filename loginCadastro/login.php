@@ -22,7 +22,7 @@
 
 
 
-    <div class="d-flex align-items-center py-4 px-5 divCentral">
+    <div class="d-flex align-items-center py-4 px-5">
         <main class="w-100 p-3">
             <div class="container" id="container1">
                 <form action="login.php" method="post">
