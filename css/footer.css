@@ -1,0 +1,47 @@
+footer {
+    background-color: black;
+}
+
+div.bgFooter {
+    padding: 2%;
+    width: 100%;
+    height: fit-content;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+div.infoFooter {
+    color: white;
+    font-family: Montserrat;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+
+}
+
+div.infoFooter a {
+    color: white;
+    text-decoration: none;
+}
+
+div.logoFooter {
+    display: flex;
+    flex-direction: column;
+}
+
+div.social {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+div.direitos {
+    height: fit-content;
+    background-color: #222222;
+    text-align: center;
+    padding: 0px 0px 1px 0px;
+}

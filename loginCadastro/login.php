@@ -8,6 +8,8 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="icon" type="img/png" href="../assets/logo.png">
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/default.css">
+
     <title>Produtos do Futuro</title>
 </head>
 
@@ -20,7 +22,7 @@
 
 
 
-    <div class="d-flex align-items-center py-4 px-5">
+    <div class="d-flex align-items-center py-4 px-5 divCentral">
         <main class="w-100 p-3">
             <div class="container" id="container1">
                 <form action="login.php" method="post">
@@ -106,7 +108,7 @@ if (isset($_POST['logar'])) {
 <script>
     document.querySelector("form").addEventListener("submit", function (event) {
         event.preventDefault();
-        <?php echo $errType; ?> == 1 ? document.getElementById("err").style.display = "block" : document.getElementById("err").style.display = "none";
+        const result = <?php echo $errType; ?> == 1 ? document.getElementById("err").style.display = "block" : document.getElementById("err").style.display = "none";
 
     });
 

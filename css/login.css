@@ -15,7 +15,7 @@ p#err {
 
 img {
     width: 150px;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
 }
 
 #div {
@@ -37,6 +37,20 @@ main {
 
 .place {
     padding-left: 15px;
+   
+
+}
+
+.divCentral {
+    background-color: rgb(220, 220, 220);
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 5%;
 }
 
 .esc {

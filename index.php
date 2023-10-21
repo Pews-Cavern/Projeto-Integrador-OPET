@@ -14,7 +14,8 @@
     <link rel="icon" type="img/png" href="./assets/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./navBar.css">
+    <link rel="stylesheet" href="./css/navBar.css">
+    <link rel="stylesheet" href="./css/default.css">
     <title>Produtos do Futuro</title>
 
 </head>
@@ -32,7 +33,6 @@
     }
 
     header * {
-        color: white;
         text-align: center;
     }
 
@@ -55,9 +55,7 @@
         box-shadow: 4px 6px 9px -3px rgba(74, 74, 74, 1), -10px -10px 7px -1px rgba(23, 23, 23, 1);
     }
 
-    div.bottomText * {
-        color: black;
-    }
+
 
     div.cardBox {
         background-color: white;
@@ -85,11 +83,7 @@
         align-items: center;
     }
 
-    div.cardBox p,
-    h3 {
-        color: black;
 
-    }
 
     div.bottomPartWhatYouSearchingFor {
         display: flex;

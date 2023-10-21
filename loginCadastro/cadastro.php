@@ -66,7 +66,6 @@
 </body>
 <?php
 include "config.php";
-echo "eae2";
 if (isset($_POST['gravar'])) {
     if (isset($_POST['pw1']) && isset($_POST['pw2'])) {
         $pw1 = $_POST['pw1'];
@@ -74,9 +73,7 @@ if (isset($_POST['gravar'])) {
 
         if ($pw1 !== $pw2) {
             echo "As senhas devem ser iguais"; //<---- Mudar isso ASAP TODO
-
         } else {
-
             $nome = $_POST['nome'];
             $email = $_POST['email'];
             $pw = md5($pw1);
@@ -88,7 +85,7 @@ if (isset($_POST['gravar'])) {
                 $grava->bindValue(':pemail', $email);
                 $grava->bindValue(':ppw', $pw);
                 $grava->execute();
-                header("location: login.php");
+                header("location: ./cadastro/index.php");
             } else {
                 echo "Por favor preencha todos os campos corretamente"; //<---- Mudar isso ASAP TODO
             }
