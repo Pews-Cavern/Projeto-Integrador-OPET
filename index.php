@@ -233,7 +233,13 @@
         background-color: #222222;
         text-align: center;
         padding: 0px 0px 1px 0px;
+        height: 2rem;
     }
+
+    a {
+        font-family: 'Bebas Neue', sans-serif;
+    }
+
 
 </style>
 
