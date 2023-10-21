@@ -95,7 +95,6 @@
 include "../../../util/config.php";
 
 if (isset($_POST['gravar'])) {
-    echo "EAE";
     if (isset($_POST['password']) && isset($_POST['password-2'])) {
         $pw1 = $_POST['password'];
         $pw2 = $_POST['password-2'];
