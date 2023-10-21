@@ -12,16 +12,11 @@
 </head>
 
 <body>
-
     <button onclick="location.href='../index.php'" id="x">
         X
     </button>
-
     <div class="d-flex align-items-center py-4 px-5">
-
-
         <main class="w-100 p-3">
-
             <div class="container" id="container1">
                 <form action="./cadastro.php" method="post">
                     <div class="row">
@@ -46,7 +41,6 @@
                                 <p class="place">Senha</p>
                             </label>
                         </div>
-
                         <div class="form-floating mb-3">
                             <input type="password" class="form-control" name="pw2" id="senha1"
                                 placeholder="Confirmar Senha">
@@ -54,47 +48,26 @@
                                 <p class="place">Confirmar Senha</p>
                             </label>
                         </div>
-
-
-
-
-
-
-
                     </div>
                     <!--submit-->
-
-                    <input class="btn btn-primary mt-3 mx-auto" type="submit" value="Cadastrar" id="button">
-
+                    <input class="btn btn-primary mt-3 mx-auto" type="submit" value="Cadastrar" name="gravar"
+                        id="button">
                 </form>
                 <div class="container bottomPart">
                     <p class="text-center">Já possui uma conta? | <a href="../loginCadastro/login.php">Entre!</a>
                     </p>
                 </div>
             </div>
-
         </main>
     </div>
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 </body>
 <?php
 include "config.php";
-function debug_to_console($data)
-{
-    $output = $data;
-    if (is_array($output))
-        $output = implode(',', $output);
-
-    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
-}
-
-debug_to_console("Test");
-if (isset($_POST['grava'])) {
+echo "eae2";
+if (isset($_POST['gravar'])) {
     if (isset($_POST['pw1']) && isset($_POST['pw2'])) {
         $pw1 = $_POST['pw1'];
         $pw2 = $_POST['pw2'];

@@ -106,8 +106,8 @@ if (isset($_POST['logar'])) {
 <script>
     document.querySelector("form").addEventListener("submit", function (event) {
         event.preventDefault();
-        const result = <?php echo $errType; ?> == 1 ? document.getElementById("err").style.display = "block" : document.getElementById("err").style.display = "none";
- 
+        <?php echo $errType; ?> == 1 ? document.getElementById("err").style.display = "block" : document.getElementById("err").style.display = "none";
+
     });
 
 
