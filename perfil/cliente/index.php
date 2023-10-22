@@ -16,8 +16,7 @@
         height: fit-content;
         width: fit-content;
         padding: 30px 60px 30px 60px;
-        margin: 4% 5%;
-
+        margin: 3% 3%;
         border-radius: 15px;
     }
 
