@@ -53,34 +53,46 @@
         <h1>Cadastro Vendedor</h1>
         <form action="./index.php" method="post">
             <div class="form-floating mb-2">
-                <input type=" text" class="form-control" name="name" id="Nome" placeholder="Nome">
+                <input type="text" class="form-control" name="name" id="Nome" placeholder="Nome" required
+                    pattern="^[A-Za-z ]+$" title="Apenas letras e espaços são permitidos.">
                 <label for="Nome">
                     <p class="place">Nome Completo</p>
                 </label>
             </div>
+
             <div class="form-floating mb-2">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required
+                    pattern="[^@\s]+@[^@\s]+\.[a-zA-Z]{2,}"
+                    title="Digite um endereço de email válido (exemplo: nome@dominio.com)">
                 <label for="email">
                     <p class="place">Email</p>
                 </label>
             </div>
+
+
             <div class="form-floating mb-2">
-                <input type="password" class="form-control" name="password" id="senha" placeholder="Senha">
+                <input type="password" class="form-control" name="password" id="senha" placeholder="Senha" required
+                    pattern=".{8,}" title="A senha deve ter no mínimo 8 caracteres">
                 <label for="senha">
                     <p class="place">Senha</p>
                 </label>
             </div>
+
             <div class="form-floating mb-2">
-                <input type="password" class="form-control" name="password-2" id="senha2" placeholder="Senha">
+                <input type="password" class="form-control" name="password-2" id="senha2" placeholder="Senha" required
+                    pattern=".{8,}" title="A senha deve ter no mínimo 8 caracteres">
                 <label for="senha2">
                     <p class="place">Confirmar Senha</p>
                 </label>
             </div>
-            <input class="btn btn-primary mt-3 mx-auto" type="submit" value="Cadastrar" name="gravar" id="button">
+
+            <input class="btn btn-primary mt-3 mx-auto" type="submit" value="Cadastrar" name="gravar" id="button"
+                required>
+
             <div class="container bottomPart">
-                <p class="text-center">Já possui uma conta? | <a href="../../login.php">Entre!</a>
-                </p>
+                <p class="text-center">Já possui uma conta? | <a href="../../login.php">Entre!</a></p>
             </div>
+
         </form>
     </main>
 
@@ -93,15 +105,15 @@
 
 <?php
 include "../../../util/config.php";
-
+$err = "null";
 if (isset($_POST['gravar'])) {
-    if (isset($_POST['password']) && isset($_POST['password-2'])) {
-        $pw1 = $_POST['password'];
-        $pw2 = $_POST['password-2'];
+    if (isset($_POST['pw1']) && isset($_POST['pw2'])) {
+        $pw1 = $_POST['pw1'];
+        $pw2 = $_POST['pw2'];
         if ($pw1 !== $pw2) {
-            echo "As senhas devem ser iguais"; //<---- Mudar isso ASAP TODO
+            $err = "As senhas devem ser iguais";
         } else {
-            $nome = $_POST['name'];
+            $nome = $_POST['nome'];
             $email = $_POST['email'];
             $pw = md5($pw1);
             if (!empty($nome) && !empty($email) && !empty($pw)) {
@@ -110,13 +122,14 @@ if (isset($_POST['gravar'])) {
                 $grava->bindValue(':pemail', $email);
                 $grava->bindValue(':ppw', $pw);
                 $grava->execute();
-                // header("location: ./infoAdicional/index.php");
+                header("location: ./cadastro/index.php");
             } else {
-                echo "Por favor preencha todos os campos corretamente"; //<---- Mudar isso ASAP TODO
+                $err = "Por favor preencha todos os campos corretamente";
             }
         }
     }
 }
 ?>
+
 
 </html>

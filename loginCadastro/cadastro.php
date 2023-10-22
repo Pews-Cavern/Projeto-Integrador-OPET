@@ -66,12 +66,13 @@
 </body>
 <?php
 include "./../util/config.php";
+$err;
 if (isset($_POST['gravar'])) {
     if (isset($_POST['pw1']) && isset($_POST['pw2'])) {
         $pw1 = $_POST['pw1'];
         $pw2 = $_POST['pw2'];
         if ($pw1 !== $pw2) {
-            echo "As senhas devem ser iguais"; //<---- Mudar isso ASAP TODO
+            $err = "As senhas devem ser iguais";
         } else {
             $nome = $_POST['nome'];
             $email = $_POST['email'];
@@ -84,11 +85,12 @@ if (isset($_POST['gravar'])) {
                 $grava->execute();
                 header("location: ./cadastro/index.php");
             } else {
-                echo "Por favor preencha todos os campos corretamente"; //<---- Mudar isso ASAP TODO
+                $err = "Por favor preencha todos os campos corretamente";
             }
         }
     }
 }
 ?>
+
 
 </html>
