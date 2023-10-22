@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="img/png" href="../assets/logo.png">
+    <link rel="icon" type="img/png" href="../../../assets/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../../../css/default.css">
@@ -107,13 +105,13 @@
 include "../../../util/config.php";
 $err = "null";
 if (isset($_POST['gravar'])) {
-    if (isset($_POST['pw1']) && isset($_POST['pw2'])) {
-        $pw1 = $_POST['pw1'];
-        $pw2 = $_POST['pw2'];
+    if (isset($_POST['password']) && isset($_POST['password-2'])) {
+        $pw1 = $_POST['password'];
+        $pw2 = $_POST['password-2'];
         if ($pw1 !== $pw2) {
             $err = "As senhas devem ser iguais";
         } else {
-            $nome = $_POST['nome'];
+            $nome = $_POST['name'];
             $email = $_POST['email'];
             $pw = md5($pw1);
             if (!empty($nome) && !empty($email) && !empty($pw)) {
@@ -122,7 +120,7 @@ if (isset($_POST['gravar'])) {
                 $grava->bindValue(':pemail', $email);
                 $grava->bindValue(':ppw', $pw);
                 $grava->execute();
-                header("location: ./cadastro/index.php");
+                header("location: ./infoAdicional/index.php");
             } else {
                 $err = "Por favor preencha todos os campos corretamente";
             }
