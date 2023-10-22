@@ -441,7 +441,7 @@
         </div>
 
         <div class="singup">
-            <div class="text" onclick="location.href='./loginCadastro/login.php'">
+            <div class="text" onclick="location.href='./loginCadastro/login/index.php'">
                 <p id="logon">Login</p>
             </div>
         </div>

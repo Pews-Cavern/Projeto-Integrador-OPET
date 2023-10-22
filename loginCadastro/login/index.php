@@ -50,7 +50,7 @@
         <h1>Login</h1>
         <form action="./index.php" method="post">
 
-           
+
             <div class="form-floating mb-2">
                 <input type="email" class="form-control" name="email" id="email" placeholder="Email" required
                     pattern="[^@\s]+@[^@\s]+\.[a-zA-Z]{2,}"
@@ -74,7 +74,9 @@
                 required>
 
             <div class="container bottomPart">
-                <p class="text-center">Já possui uma conta? | <a href="../../login.php">Entre!</a></p>
+                <p class="text-center">Ainda não tem uma conta? | <a
+                        href="../index.php">Cadastre-se!</a>
+                </p>
             </div>
 
         </form>
