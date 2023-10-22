@@ -18,7 +18,7 @@
 
     main {
         height: fit-content;
-        padding: 50px 50px 0px 50px;
+        padding: 20px 50px 0px 50px;
         width: 50%;
         background-color: #dcf7df;
         position: absolute;

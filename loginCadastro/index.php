@@ -72,11 +72,11 @@
 
 <body>
     <div class="container">
-        <div class="img talentos" onclick="location.href='./cadastro/cliente/index.php'">
+        <div class="img talentos" onclick="location.href='./cadastro/index.php?type=1'">
             <p class="talentos">Procuro talentos</p>
             <h3>ENCONTRE TALENTOS AGORA</h3>
         </div>
-        <div class="img comprador" onclick="location.href='./cadastro/vendedor/index.php'">
+        <div class="img comprador" onclick="location.href='./cadastro/index.php?type=2'">
             <p class="talentos">Procuro trabalho</p>
             <h3>ENCONTRE TRABALHO AGORA</h3>
         </div>
@@ -86,7 +86,6 @@
         <p class="text-center">Já possui uma conta? | <a href="../loginCadastro/login.php">Entre!</a>
         </p>
     </div>
-
 
 
 
