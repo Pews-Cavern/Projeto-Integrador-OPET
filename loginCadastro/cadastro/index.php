@@ -89,7 +89,7 @@
                 required>
 
             <div class="container bottomPart">
-                <p class="text-center">Já possui uma conta? | <a href="./../login/index.php">Entre!</a></p>
+                <p class="text-center">Já possui uma conta? | <a href="./login/index/index.php">Entre!</a></p>
             </div>
 
         </form>
