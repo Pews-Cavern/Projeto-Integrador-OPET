@@ -267,8 +267,8 @@
         <ul class="pt-5">
             <li><a href="./index.php">Home</a></li>
             <li><a href="./about/index.php">Sobre Nós</a></li>
-            <li><a href="">WIP</a></li>
-            <li><a href="">WIP</a></li>
+            <li><a href="./loginCadastro/login/index.php">Login</a></li>
+            <li><a href="./loginCadastro/index.php">Cadastro</a></li>
         </ul>
     </nav>
     <header>

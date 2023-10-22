@@ -61,24 +61,54 @@
 
     p {
         font-size: 1.5rem;
+        text-align: center;
     }
 
-    p.talentos,
-    h3 {
-        background-color: black;
 
+
+    .divBehind {
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        height: fit-content;
+        width: 80%;
+        padding: 20px 10px 20px 10px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .divBehind * {
+        color: black
+    }
+
+    .divBehind:hover {
+        background-color: white;
     }
 </style>
 
 <body>
     <div class="container">
         <div class="img talentos" onclick="location.href='./cadastro/index.php?type=1'">
-            <p class="talentos">Procuro talentos</p>
-            <h3>ENCONTRE TALENTOS AGORA</h3>
+            <div class="divBehind">
+
+                <p class="talentos">Cliente</p>
+                <h3>ENCONTRE TALENTOS AGORA</h3>
+                <div class="whatYouCanFind">
+                    <p>🞄 Receba trabalho por um preço acessível</p>
+                    <p>🞄 Ajude uma gama de universitários a ganhar experiência em sua área</p>
+                    <p>🞄 Procure por possíveis futuros talentos para sua equipe</p>
+                </div>
+            </div>
         </div>
+
         <div class="img comprador" onclick="location.href='./cadastro/index.php?type=2'">
-            <p class="talentos">Procuro trabalho</p>
-            <h3>ENCONTRE TRABALHO AGORA</h3>
+            <div class="divBehind">
+                <p class="talentos">Vendedor/Estudante</p>
+                <h3>ENCONTRE TRABALHO AGORA</h3>
+                <p>🞄 Ofereça seus serviços e habilidades</p>
+                <p>🞄 Ganhe experiência prática em sua área de estudo</p>
+                <p>🞄 Comece a construir seu futuro profissional</p>
+            </div>
         </div>
     </div>
 
@@ -86,9 +116,6 @@
         <p class="text-center">Já possui uma conta? | <a href="../loginCadastro/login.php">Entre!</a>
         </p>
     </div>
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>

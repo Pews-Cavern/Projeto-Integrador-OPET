@@ -89,7 +89,7 @@
                 required>
 
             <div class="container bottomPart">
-                <p class="text-center">Já possui uma conta? | <a href="../../login.php">Entre!</a></p>
+                <p class="text-center">Já possui uma conta? | <a href="./../login/index.php">Entre!</a></p>
             </div>
 
         </form>
@@ -124,7 +124,7 @@ if (isset($_POST['gravar'])) {
                 $grava->bindValue(':pemail', $email);
                 $grava->bindValue(':ppw', $pw);
                 $grava->execute();
-                header("location: ./infoAdicional/index.php");
+                header("location: ./vendedor/infoAdicional/index.php");
             } else {
                 $err = "Por favor preencha todos os campos corretamente";
             }

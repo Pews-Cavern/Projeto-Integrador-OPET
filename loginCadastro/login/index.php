@@ -62,7 +62,7 @@
 
 
             <div class="form-floating mb-2">
-                <input type="password" class="form-control" name="password" id="senha" placeholder="Senha" required
+                <input type="password" class="form-control" name="pw" id="senha" placeholder="Senha" required
                     pattern=".{8,}" title="A senha deve ter no mínimo 8 caracteres">
                 <label for="senha">
                     <p class="place">Senha</p>
@@ -70,12 +70,10 @@
             </div>
 
 
-            <input class="btn btn-primary mt-3 mx-auto" type="submit" value="Cadastrar" name="gravar" id="button"
-                required>
+            <input class="btn btn-primary mt-3 mx-auto" type="submit" value="Entrar" name="logar" id="button" required>
 
             <div class="container bottomPart">
-                <p class="text-center">Ainda não tem uma conta? | <a
-                        href="../index.php">Cadastre-se!</a>
+                <p class="text-center">Ainda não tem uma conta? | <a href="../index.php">Cadastre-se!</a>
                 </p>
             </div>
 
@@ -91,31 +89,28 @@
 
 <?php
 include "../../util/config.php";
-$err = "null";
-if (isset($_POST['gravar'])) {
-    if (isset($_POST['password']) && isset($_POST['password-2'])) {
-        $pw1 = $_POST['password'];
-        $pw2 = $_POST['password-2'];
-        if ($pw1 !== $pw2) {
-            $err = "As senhas devem ser iguais";
-        } else {
-            $nome = $_POST['name'];
-            $email = $_POST['email'];
-            $pw = md5($pw1);
-            if (!empty($nome) && !empty($email) && !empty($pw)) {
-                $grava = $conn->prepare('INSERT INTO `login`(`id_log`, `nome_log`, `email_log`, `pw_log`) VALUES (NULL, :pnome, :pemail, :ppw)');
-                $grava->bindValue(':pnome', $nome);
-                $grava->bindValue(':pemail', $email);
-                $grava->bindValue(':ppw', $pw);
-                $grava->execute();
-                header("location: ./infoAdicional/index.php");
-            } else {
-                $err = "Por favor preencha todos os campos corretamente";
-            }
-        }
+$errType = false;
+if (isset($_POST['logar'])) {
+    $email = $_POST['email'];
+    $pw = MD5($_POST['pw']);
+    $login = $conn->prepare('SELECT * FROM login WHERE email_log = :email AND pw_log=:pw');
+    $login->bindValue(":email", $email);
+    $login->bindValue(":pw", $pw);
+    $login->execute();
+    if ($login->rowCount() == 0) {
+        $errType = true;
+    } else {
+        $cons = $login->fetch();
+        $id = $cons['id_log'];
+        session_start();
+        $_SESSION['login'] = $id;
+        header("location: ./../../perfil/cliente/index.php");
     }
 }
 ?>
 
+<script>
+    console.log(<?php echo $err ?>);
+</script>
 
 </html>
