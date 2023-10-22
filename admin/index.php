@@ -72,7 +72,8 @@
 
 
 
-            <input class="btn btn-primary mt-3 mx-auto" type="submit" value="Entrar" name="gravar" id="button" onclick="location">
+            <input class="btn btn-primary mt-3 mx-auto" type="submit" value="Entrar" name="gravar" id="button"
+                onclick="location.href='./control/index.php'">
 
 
 
