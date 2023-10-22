@@ -11,13 +11,21 @@
     <title>Produtos do Futuro</title>
 </head>
 <style>
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+
     aside {
         background-color: #dcf7df;
         height: fit-content;
         width: fit-content;
-        padding: 30px 60px 30px 60px;
-        margin: 3% 3%;
+        padding: 30px 60px 50px 60px;
+        margin: 2% 3%;
         border-radius: 15px;
+        position: fixed;
+        filter: drop-shadow(5px -1px 16px #000000);
+
     }
 
     img#profilePicture {
@@ -46,7 +54,7 @@
     }
 
     p {
-        margin: 0px;
+        margin-top: 2px;
         color: black;
         font-weight: 600;
     }
@@ -54,6 +62,59 @@
     button#redes {
         margin-top: 15px;
         border-radius: 50px;
+    }
+
+
+    /*----*/
+    main {
+        background-color: #dcf7df;
+        height: fit-content;
+        width: 100%;
+        padding-left: 400px;
+        margin-top: 10%;
+        padding-top: 25px;
+        padding-bottom: 1500px;
+    }
+
+    nav.navBar {
+        display: flex;
+        flex-direction: row;
+        width: 40%;
+        justify-content: space-between;
+    }
+
+    nav.navBar a.navLink {
+        font-size: 30px;
+        margin-right: 50px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+    }
+
+    nav.navBar a.navLink.selected {
+        color: #007bff;
+    }
+
+    .follow-button {
+        background-color: #1DA1F2;
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        padding: 0px 50px;
+        font-size: 20px;
+        margin-left: auto;
+    }
+
+    .follow-button:hover {
+        background-color: #0B77B1;
+    }
+
+    div.feed {
+        background-color: red;
+        height: fit-content;
+        width: 80%;
+        margin-top: 3%;
+        padding: 50px;
     }
 </style>
 
@@ -77,9 +138,36 @@
         </div>
     </aside>
 
+    <main>
+        <nav class="navBar">
+            <a href="#" class="navLink selected" onclick="selectNavLink(event)">Teste1</a>
+            <a href="#" class="navLink" onclick="selectNavLink(event)">Teste2</a>
+            <a href="#" class="navLink" onclick="selectNavLink(event)">Teste3</a>
+            <button class="follow-button">Seguir</button>
+        </nav>
+
+        <div class="feed">
+
+        </div>
+    </main>
 
 
+    <script>
+        function selectNavLink(event) {
+            const navLinks = document.querySelectorAll('.navLink');
+            navLinks.forEach(link => link.classList.remove('selected'));
+            const selectedLink = event.target;
+            selectedLink.classList.add('selected');
+        }
 
+
+        const defaultJson = {
+            
+        }
+        function createCard(json) {
+
+        }
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
