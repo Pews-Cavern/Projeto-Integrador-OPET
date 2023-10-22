@@ -141,10 +141,10 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $data[] = $row;
 }
 
-if (isset($_COOKIE["removeId"])) {
+// if (isset($_COOKIE["removeId"])) {
 
-    $conn->prepare("DELETE FROM `login` WHERE `login`.`id_log` = $cokie");
-}
+//     $conn->prepare("DELETE FROM `login` WHERE `login`.`id_log` = $cokie");
+// }
 
 ?>
 
