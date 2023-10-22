@@ -7,7 +7,6 @@
     <link rel="icon" type="img/png" href="../assets/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7Rxnatzjc8HDHvvT2MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/loginIndex.css">
     <title>Produtos do Futuro</title>
 </head>
 
@@ -36,12 +35,18 @@
         transition: background-color 0.3s, transform 0.3s;
     }
 
-    .comprador {
-        background-image: url('../assets/compradorPlaceholder.png');
+    div.comprador {
+        background-image: url('../assets/bookshelf.png');
     }
 
-    .talentos {
-        background-image: url('../assets/vendedorPlaceholder.png');
+    div.talentos {
+        background-image: url('../assets/handshake.png');
+
+    }
+
+    p.talentos {
+        margin-bottom;
+        : 1px
     }
 
     .img:hover {
@@ -56,6 +61,12 @@
 
     p {
         font-size: 1.5rem;
+    }
+
+    p.talentos,
+    h3 {
+        background-color: black;
+
     }
 </style>
 

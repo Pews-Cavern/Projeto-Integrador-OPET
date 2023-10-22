@@ -88,7 +88,6 @@ $errType = false;
 if (isset($_POST['logar'])) {
     $email = $_POST['email'];
     $pw = MD5($_POST['pw']);
-
     $login = $conn->prepare('SELECT * FROM login WHERE email_log = :email AND pw_log=:pw');
     $login->bindValue(":email", $email);
     $login->bindValue(":pw", $pw);
@@ -111,7 +110,6 @@ if (isset($_POST['logar'])) {
         const result = <?php echo $errType; ?> == 1 ? document.getElementById("err").style.display = "block" : document.getElementById("err").style.display = "none";
 
     });
-
 
 </script>
 
