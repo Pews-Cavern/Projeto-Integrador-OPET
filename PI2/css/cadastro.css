@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(241, 241, 241);
+}
+
+img {
+    width: 150px;
+    margin-bottom: 15px;
+
+}
+
+
+.place {
+    padding-left: 15px;
+}
+
+main {
+    margin-top: 50px;
+}
+
+.bottomPart {
+    margin-top: 20px;
+}
+
+#button {
+    width: 470px;
+}
+
+#div {
+    text-align: center;
+}
+
+#container1 {
+    width: 500px;
+    align-items: start;
+}
+
+#err {
+    text-align: center;
+    color: gray;
+}
+
+
+#x {
+    position: absolute;
+    background: gray;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border-color: transparent;
+    top: 10px;
+    right: 10px;
+}

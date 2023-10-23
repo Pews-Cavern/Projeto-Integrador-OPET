@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(241, 241, 241);
+
+}
+p#err {
+    text-align: center;
+    color: gray;
+    display: none;
+}
+#container1 {
+    width: 500px;
+}
+img {
+    width: 150px;
+    margin-bottom: 50px;
+}
+#div {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.bottomPart {
+    margin-top: 0px;
+}
+main {
+    margin-top: 60px;
+}
+.btn {
+    margin: 20px 0px 20px 0px;
+}
+.place {
+    padding-left: 15px;
+}
+.esc {
+    position: absolute;
+    background: gray;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border-color: transparent;
+    top: 10px;
+    right: 10px;
+}
+@media (max-width:1040px) {
+    #container1 {
+        width: auto;
+    }
+}
