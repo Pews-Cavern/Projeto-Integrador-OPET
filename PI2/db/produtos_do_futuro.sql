@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 20/10/2023 às 15:46
+-- Tempo de geração: 22/10/2023 às 06:56
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -24,6 +24,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estrutura para tabela `infovendedor`
+--
+
+CREATE TABLE `infovendedor` (
+  `id_vend` int(11) NOT NULL,
+  `id_login` int(11) NOT NULL,
+  `facul` varchar(30) NOT NULL,
+  `curso` varchar(30) NOT NULL,
+  `area` varchar(30) NOT NULL,
+  `sub_area` varchar(30) NOT NULL,
+  `semestre` float NOT NULL,
+  `semestre_total` float NOT NULL,
+  `empregado` tinyint(1) NOT NULL,
+  `cidade` varchar(30) NOT NULL,
+  `genero` int(3) NOT NULL,
+  `nascimento` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura para tabela `login`
 --
 
@@ -35,16 +56,15 @@ CREATE TABLE `login` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `login`
---
-
-INSERT INTO `login` (`id_log`, `nome_log`, `email_log`, `pw_log`) VALUES
-(5, 'aaa', 'aaa@aaa.aaa', '594f803b380a41396ed63dca39503542'),
-
-
---
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices de tabela `infovendedor`
+--
+ALTER TABLE `infovendedor`
+  ADD PRIMARY KEY (`id_vend`),
+  ADD KEY `fk_id` (`id_login`);
 
 --
 -- Índices de tabela `login`
@@ -60,7 +80,17 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT de tabela `login`
 --
 ALTER TABLE `login`
-  MODIFY `id_log` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_log` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- Restrições para tabelas despejadas
+--
+
+--
+-- Restrições para tabelas `infovendedor`
+--
+ALTER TABLE `infovendedor`
+  ADD CONSTRAINT `fk_id` FOREIGN KEY (`id_login`) REFERENCES `login` (`id_log`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

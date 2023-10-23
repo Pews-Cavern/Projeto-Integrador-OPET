@@ -1,0 +1,25 @@
+Vendedor
+-------
+id_vendedor - int => id increase
+id_login - int => chave estrangeira do login
+facul - varchar(30) => Nome da facul
+curso - varchar(30) => Nome do curso
+area - int  => Id da área (Ver doc)
+sub_area - json => Id das sub-áreas (Ver doc)
+inicioCurso - DATE => Data do inicio do curso
+finalCurso - DATE => Data para o termino do curso
+buscandoEmprego - bool => Se está procurando emprego ou não
+cidade - varchar(30) => Nome da cidade
+genero - int  => Gênero (Ver doc)
+nascimento - DATE  => Data de nascimento
+
+
+----- Opcionais
+ProfilePicture - varchar(90)  => URL Da foto de perfiç
+bio - MEDIUMTEXT => Biografia/apresentação
+
+----- Informações do sistema
+vendasAnunciadas - int  => Quantidade de vendas anunciadas
+nota - int => A média de notas que o vendedor tem 
+produtosAnunciados - varchar => Id de seus produtos anunciados
+

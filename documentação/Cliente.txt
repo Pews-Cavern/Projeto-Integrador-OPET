@@ -1,0 +1,21 @@
+Cliente
+-------
+id_cliente - int  => Id increase
+id_login - int => Chave estrangeira do login
+nome_empresa - varchar(30) => Nome da empresa (pode ser salvo como null caso não trabalhe)
+procurando_talentos - bool => Caso esteja querendo contratar alguém
+areas_preferidas - int => Suas áreas favoritas
+genero - int => Gênero (Ver docs)
+cidade - varchar(30) => Nome da cidade
+
+
+
+----- Opcionais
+nascimento - DATE  => Data de nascimento
+ProfilePicture - varchar(90)  => URL Da foto de perfiç
+bio - MEDIUMTEXT => Biografia/apresentação
+
+
+----- Informações do sistema
+comprasRealizadas- int  => Quantidade de compras realizadas
+produtosAnunciados - varchar => Id de seus produtos anunciados

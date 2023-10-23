@@ -1,0 +1,20 @@
+Produto
+-------
+id_prod - int => Id incrase
+id_author - int => chave estrangeira do login
+nome_prod - varchar(30) => Nome do produto
+price_prod - float => Preço do produto
+descricao_prod - mediumtext => Descrição do produto
+area_prod - int => Id da Área do produto (Ver doc)
+subcategoria_prod - int => Id da sub-área do produto (Ver doc)
+downloadUrl_prod - ?* => Url pra download do produto
+banner_prod - ?* => Url pro banner do protudo
+carrosselDeImagens_prod - ?* => Array de imagens que podem ficar pasasndo em carrosel no anuncio
+
+
+?* -> Não sei o tipo exato que vamos colocar
+
+
+
+
+

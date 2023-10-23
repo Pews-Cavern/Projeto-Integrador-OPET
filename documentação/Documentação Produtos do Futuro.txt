@@ -1,0 +1,84 @@
+Documentação Produtos do Futuro
+-------------------------------
+Relação Id's -> Áreas:
+
+1 -> Ti/Informática
+2 -> Design
+3 -> Marketing
+4 -> Nutrição
+5 -> AudioVisuais
+6 -> Publicidade
+7 -> Jornalismo
+
+
+
+Relação Id's -> Sub-Áreas:
+
+1 -> Ti/Informática
+101 -> Programação Front-End
+102 -> Programação Back-End
+103 -> Programação Mobile
+104 -> Programação de Software
+105 -> Analista de Banco de Dados
+106 -> Desenvolvedor de Jogos
+
+2 -> Design
+201 -> Design Gráfico
+202 -> Design de Interface de Usuário (UI)
+203 -> Design de Experiência do Usuário (UX)
+204 -> Design de Produto
+205 -> Design de Interação
+206 -> Design de Ilustração
+207 -> Design de Embalagens
+208 -> Design de Identidade Visual
+209 -> Design de Sites
+210 -> Design de Aplicativos Móveis
+
+3 -> Marketing
+301 -> Marketing Digital
+302 -> Marketing de Conteúdo
+303 -> Publicidade Online
+304 -> Estratégia de Marketing
+305 -> Marketing de Mídias Sociais
+306 -> SEO (Otimização de Mecanismos de Busca)
+307 -> E-mail Marketing
+308 -> Marketing de Influência
+
+4 -> Nutrição
+401 -> Nutrição Clínica
+402 -> Nutrição Esportiva
+403 -> Nutrição Infantil
+404 -> Nutrição Vegana/Vegetariana
+405 -> Nutrição para Emagrecimento
+406 -> Nutrição para Idosos
+
+5 -> AudioVisuais
+501 -> Produção de Vídeos
+502 -> Edição de Vídeos
+503 -> Produção de Áudio
+504 -> Animação
+505 -> Fotografia
+506 -> Pós-Produção
+
+6 -> Publicidade
+601 -> Publicidade Tradicional
+602 -> Planejamento de Campanhas
+603 -> Estratégia de Anúncios
+604 -> Criatividade Publicitária
+605 -> Marketing Promocional
+606 -> Outdoor e Mídia Impressa
+
+7 -> Jornalismo
+701 -> Jornalismo de Investigação
+702 -> Jornalismo de Dados
+703 -> Jornalismo Esportivo
+704 -> Jornalismo de Moda
+705 -> Reportagem Política
+706 -> Jornalismo Cultural
+-------------------------------
+
+Relação Id's -> Genero
+
+0 - Não Binário
+1 - Homem
+2 - Mulher

@@ -140,12 +140,6 @@ $data = array();
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $data[] = $row;
 }
-
-// if (isset($_COOKIE["removeId"])) {
-
-//     $conn->prepare("DELETE FROM `login` WHERE `login`.`id_log` = $cokie");
-// }
-
 ?>
 
 <script>
@@ -190,10 +184,13 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         }
         if (arrs.length == 0) { document.getElementById("addAll").innerHTML = "<p>Sem registro</p>"; return; }
         let result = "<div class='info title'><p class='title'>Nome</p><p class=' title'>Email</p ></div>"
+
+
         for (var info of arrs) {
             var i = info["id_log"];
             result += "<div class='info' id='" + i + "'><div class='form-check'><input class='form-check-input' type='checkbox' id='exampleCheck1' onclick='selecionar(" + i + ")'><label class='form-check-label' for='exampleCheck1'></label></div><p>" + info["nome_log"] + "</p><p>" + info["email_log"] + "</p></div>";
         }
+
         document.getElementById("addAll").innerHTML = result;
 
     }

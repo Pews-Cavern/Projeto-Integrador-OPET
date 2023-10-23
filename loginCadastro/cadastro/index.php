@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="img/png" href="../../../assets/logo.png">
+    <link rel="icon" type="img/png" href="./../../assets/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../../css/default.css">
+    <link rel="stylesheet" href="./../../css/default.css">
     <title>Produtos do Futuro</title>
 </head>
 <style>
@@ -48,8 +48,8 @@
 
     <main>
 
-        <img src="../../../assets/logo.png" alt="logo" class="logo">
-        <h1>Cadastro Vendedor</h1>
+        <img src="./../../assets/logo.png" alt="logo" class="logo">
+        <h1 id='title'>Cadastro Vendedor</h1>
         <form action="./index.php" method="post">
             <div class="form-floating mb-2">
                 <input type="text" class="form-control" name="name" id="Nome" placeholder="Nome" required
@@ -89,12 +89,14 @@
                 required>
 
             <div class="container bottomPart">
-                <p class="text-center">Já possui uma conta? | <a href="../../login.php">Entre!</a></p>
+                <p class="text-center">Já possui uma conta? | <a href="../login/index.php">Entre!</a></p>
             </div>
 
         </form>
     </main>
-
+    <script>
+        document.getElementById('title').textContent = new URLSearchParams(window.location.search).get('type') == 1 ? "Cadastro Cliente" : "Cadastro Vendedor";
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -103,8 +105,9 @@
 
 
 <?php
-include "../../../util/config.php";
+include "./../../util/config.php";
 $err = "null";
+
 if (isset($_POST['gravar'])) {
     if (isset($_POST['password']) && isset($_POST['password-2'])) {
         $pw1 = $_POST['password'];
@@ -121,7 +124,7 @@ if (isset($_POST['gravar'])) {
                 $grava->bindValue(':pemail', $email);
                 $grava->bindValue(':ppw', $pw);
                 $grava->execute();
-                header("location: ./infoAdicional/index.php");
+                header("location: ./vendedor/infoAdicional/index.php");
             } else {
                 $err = "Por favor preencha todos os campos corretamente";
             }

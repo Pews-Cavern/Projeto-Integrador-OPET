@@ -267,8 +267,8 @@
         <ul class="pt-5">
             <li><a href="./index.php">Home</a></li>
             <li><a href="./about/index.php">Sobre Nós</a></li>
-            <li><a href="./loginCadastro/login/index.php">Login</a></li>
-            <li><a href="./loginCadastro/index.php">Cadastro</a></li>
+            <li><a href="">WIP</a></li>
+            <li><a href="">WIP</a></li>
         </ul>
     </nav>
     <header>
@@ -441,7 +441,7 @@
         </div>
 
         <div class="singup">
-            <div class="text" onclick="location.href='./loginCadastro/login/index.php'">
+            <div class="text" onclick="location.href='./loginCadastro/login.php'">
                 <p id="logon">Login</p>
             </div>
         </div>
