@@ -82,7 +82,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 if (isset($_POST['content']) && isset($_POST['author'])) {
     $content = $_POST['content'];
     $nome = $_POST['author'];
-    $grava = $conn->prepare('INSERT INTO `chat` (`id_message`, `content`, `author`) VALUES (NULL, :pcontent, :pauthor )');
+    $grava = $conn->prepare('INSERT INTO `chat` (`id_message`, `content`, `author`) VALUES (NULL, :pcontent, :pauthor)');
     $grava->bindValue(':pcontent', $content);
     $grava->bindValue(':pauthor', $nome);
     $grava->execute();

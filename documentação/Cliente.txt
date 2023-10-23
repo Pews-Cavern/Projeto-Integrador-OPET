@@ -12,10 +12,10 @@ cidade - varchar(30) => Nome da cidade
 
 ----- Opcionais
 nascimento - DATE  => Data de nascimento
-ProfilePicture - varchar(90)  => URL Da foto de perfiç
+profile_picture - text  => URL Da foto de perfil
 bio - MEDIUMTEXT => Biografia/apresentação
 
 
 ----- Informações do sistema
-comprasRealizadas- int  => Quantidade de compras realizadas
-produtosAnunciados - varchar => Id de seus produtos anunciados
+compras_realizadas- int  => Quantidade de compras realizadas
+produtos_anunciados - varchar => Id de seus produtos anunciados
