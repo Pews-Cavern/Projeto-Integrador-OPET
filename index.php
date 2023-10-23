@@ -501,7 +501,7 @@
             <div class="infoFooter">
                 <p>WEBSITE</p>
                 <a href="./index.php">Home</a>
-                <a href="../loginCadastro/cadastro.php">Login | Cadastro</a>
+                <a href="./loginCadastro/index.php">Login | Cadastro</a>
                 <a href="./blog/index.php">Blog</a>
             </div>
             <div class="infoFooter">
