@@ -19,7 +19,7 @@
 
     main {
         height: fit-content;
-            /*Top, Right, Bottom, Left*/
+        /*Top, Right, Bottom, Left*/
         padding: 10px 40px 10px 40px;
         width: 90%;
         background-color: #dcf7df;
@@ -63,6 +63,14 @@
         display: flex;
         flex-direction: column;
     }
+
+    div.form-check {
+        background-color: white;
+        border-radius: 30px;
+        border-style: inset;
+        
+
+    }
 </style>
 
 <body>
@@ -70,7 +78,10 @@
     <main>
 
         <img src="../../../../assets/logo.png" alt="logo" class="logo">
-        <h1>Mais informações</h1>
+        <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
+            <h1>Mais Informações</h1>
+        </div>
+
         <form method="post">
             <div class="row">
                 <div class="infoFaculty">
@@ -103,25 +114,25 @@
                             placeholder="Especialidade" required pattern="^[A-Za-z ]+$"
                             title="Apenas letras e espaços são permitidos.">
                         <label for="subArea">
-                            <p class="place">Sua Especialidade</p>
+                            <p class="place">Especialidade</p>
                         </label>
                     </div>
 
                     <div class="form-floating mb-2">
-                        <input type="number" class="form-control" name="semestre" id="semestre"
+                        <input type="date" class="form-control" name="semestre" id="semestre"
                             placeholder="Atual Semestre" required pattern="^[A-Za-z ]+$"
                             title="Apenas letras e espaços são permitidos.">
                         <label for="semestre">
-                            <p class="place">Atual Semestre</p>
+                            <p class="place">Início do Curso</p>
                         </label>
                     </div>
 
                     <div class="form-floating mb-2">
-                        <input type="number" class="form-control" name="totalSemestre" id="totalSemestre"
+                        <input type="date" class="form-control" name="totalSemestre" id="totalSemestre"
                             placeholder="Total de Semestres" required pattern="^[A-Za-z ]+$"
                             title="Apenas letras e espaços são permitidos.">
                         <label for="totalSemestre">
-                            <p class="place">Total de Semestres</p>
+                            <p class="place">Término do Curso</p>
                         </label>
                     </div>
                 </div>
@@ -132,7 +143,7 @@
                         <input type="text" class="form-control" name="faculdade" id="faculdade" placeholder="Faculdade"
                             required pattern="^[A-Za-z ]+$" title="Apenas letras e espaços são permitidos.">
                         <label for="faculdade">
-                            <p class="place">Nome da Faculdade</p>
+                            <p class="place">Data de Nascimento</p>
                         </label>
                     </div>
 
@@ -140,7 +151,7 @@
                         <input type="select" class="form-control" name="curso" id="curso" placeholder="Curso" required
                             pattern="^[A-Za-z ]+$" title="Apenas letras e espaços são permitidos.">
                         <label for="curso">
-                            <p class="place">Nome do Curso</p>
+                            <p class="place">Gênero</p>
                         </label>
                     </div>
 
@@ -148,36 +159,15 @@
                         <input type="select" class="form-control" name="area" id="area" placeholder="Área do curso"
                             required pattern="^[A-Za-z ]+$" title="Apenas letras e espaços são permitidos.">
                         <label for="area">
-                            <p class="place">Área do curso</p>
+                            <p class="place">Cidade</p>
                         </label>
                     </div>
 
-                    <div class="form-floating mb-2">
-                        <input type="Checkbox" class="form-control" name="subArea" id="subArea"
-                            placeholder="Especialidade" required pattern="^[A-Za-z ]+$"
-                            title="Apenas letras e espaços são permitidos.">
-                        <label for="subArea">
-                            <p class="place">Sua Especialidade</p>
-                        </label>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Buscando Emprego ?</label>
                     </div>
 
-                    <div class="form-floating mb-2">
-                        <input type="number" class="form-control" name="semestre" id="semestre"
-                            placeholder="Atual Semestre" required pattern="^[A-Za-z ]+$"
-                            title="Apenas letras e espaços são permitidos.">
-                        <label for="semestre">
-                            <p class="place">Atual Semestre</p>
-                        </label>
-                    </div>
-
-                    <div class="form-floating mb-2">
-                        <input type="number" class="form-control" name="totalSemestre" id="totalSemestre"
-                            placeholder="Total de Semestres" required pattern="^[A-Za-z ]+$"
-                            title="Apenas letras e espaços são permitidos.">
-                        <label for="totalSemestre">
-                            <p class="place">Total de Semestres</p>
-                        </label>
-                    </div>
                 </div>
             </div>
 
