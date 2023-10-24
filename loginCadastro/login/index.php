@@ -93,7 +93,7 @@ $errType = false;
 if (isset($_POST['logar'])) {
     $email = $_POST['email'];
     $pw = MD5($_POST['pw']);
-    $login = $conn->prepare('SELECT * FROM login WHERE email_log = :email AND pw_log=:pw');
+    $login = $conn->prepare('SELECT * FROM `login` WHERE email_log = :email AND pw_log=:pw');
     $login->bindValue(":email", $email);
     $login->bindValue(":pw", $pw);
     $login->execute();
