@@ -322,12 +322,26 @@
         });
     </script>
 </body>
+<script>
 
+    function setCookie(name, value, days) {
+        const expires = new Date();
+        expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+        document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+    }
+
+    const email = new URLSearchParams(window.location.search).get('email');
+    setCookie("email", email, 30);
+
+</script>
 <?php
 include "./../../../../util/config.php";
 $errType = false;
+
+
 if (isset($_POST['gravar'])) {
-    $faculcade = $_POST['faculdade'];
+
+    $faculdade = $_POST['faculdade'];
     $curso = $_POST['curso'];
     $area = $_POST['area'];
     $subArea = $_POST['subArea'];
@@ -336,9 +350,13 @@ if (isset($_POST['gravar'])) {
     $buscandoEmprego = $_POST['buscandoEmprego'];
     $cidade = $_POST['cidade'];
     $genero = $_POST['genero'];
-    $nascimeto = $_POST['nascimento'];
-    $grava = $conn->prepare('INSERT INTO `infovendedor` (`id_vend`, `id_login`, `facul`, `curso`, `area`, `subArea`, `inicioCurso`, `finalCurso`, `buscandoEmprego`, `cidade`, `genero`, `nascimento`) VALUES (NULL, NULL, :faculdade, :curso, :area, :subArea, :inicioCurso, :finalCurso, :buscandoEmprego, :cidade, :genero, :nascimento)');
-    $grava->bindValue(":faculdade", $faculcade);
+    $nascimento = $_POST['nascimento'];
+    $email = $_COOKIE['email']; //<- Certo
+   
+    $grava = $conn->prepare('INSERT INTO `infovendedor` (`id_vend`, `email`, `faculdade`, `curso`, `area`, `subArea`, `inicioCurso`, `finalCurso`, `buscandoEmprego`, `cidade`, `genero`, `nascimento`) VALUES (NULL, :email, :faculdade, :curso, :area, :subArea, :inicioCurso, :finalCurso, :buscandoEmprego, :cidade, :genero, :nascimento)');
+
+    $grava->bindValue(":faculdade", $faculdade);
+    $grava->bindValue(":email", $email);
     $grava->bindValue(":curso", $curso);
     $grava->bindValue(":area", $area);
     $grava->bindValue(":subArea", $subArea);
@@ -347,11 +365,9 @@ if (isset($_POST['gravar'])) {
     $grava->bindValue(":buscandoEmprego", $buscandoEmprego);
     $grava->bindValue(":cidade", $cidade);
     $grava->bindValue(":genero", $genero);
-    $grava->bindValue(":nascimento", $nascimeto);
+    $grava->bindValue(":nascimento", $nascimento);
     $grava->execute();
-    if ($login->rowCount() == 0) {
-        $errType = true;
-    }
+
 }
 ?>
 <!-- INSERT INTO `infovendedor` 

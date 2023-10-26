@@ -1,7 +1,7 @@
 Cliente
 -------
 id_cliente - int  => Id increase
-id_login - int => Chave estrangeira do login
+email - varchar(30) => Email cadastrado no login(transferido por cookie)
 nome_empresa - varchar(30) => Nome da empresa (pode ser salvo como null caso não trabalhe)
 procurando_talentos - bool => Caso esteja querendo contratar alguém
 areas_preferidas - int => Suas áreas favoritas

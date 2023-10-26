@@ -86,7 +86,7 @@
             </div>
 
             <input class="btn btn-primary mt-3 mx-auto" type="submit" value="Cadastrar" name="gravar" id="button"
-                required>
+                onclick="submitForm()" required>
 
             <div class="container bottomPart">
                 <p class="text-center">Já possui uma conta? | <a href="../login/index.php">Entre!</a></p>
@@ -106,29 +106,28 @@
 
 <?php
 include "./../../util/config.php";
-$err = "null";
-
 if (isset($_POST['gravar'])) {
-    if (isset($_POST['password']) && isset($_POST['password-2'])) {
-        $pw1 = $_POST['password'];
-        $pw2 = $_POST['password-2'];
-        if ($pw1 !== $pw2) {
-            $err = "As senhas devem ser iguais";
+    $pw1 = $_POST['password'];
+    $pw2 = $_POST['password-2'];
+    if ($pw1 !== $pw2) {
+        echo "As senhas devem ser iguais";
+    } else {
+        if (isAlredySaved($_POST['email'])) {
+            echo "Você já possui algo assim";
         } else {
+
             $nome = $_POST['name'];
             $email = $_POST['email'];
             $pw = md5($pw1);
-            if (!empty($nome) && !empty($email) && !empty($pw)) {
-                $grava = $conn->prepare('INSERT INTO `login`(`id_log`, `nome_log`, `email_log`, `pw_log`) VALUES (NULL, :pnome, :pemail, :ppw)');
-                $grava->bindValue(':pnome', $nome);
-                $grava->bindValue(':pemail', $email);
-                $grava->bindValue(':ppw', $pw);
-                $grava->execute();
-                header("location: ./vendedor/infoAdicional/index.php");
-            } else {
-                $err = "Por favor preencha todos os campos corretamente";
-            }
+            $grava = $conn->prepare('INSERT INTO `login`(`id_log`, `nome_log`, `email_log`, `pw_log`) VALUES (NULL, :pnome, :pemail, :ppw)');
+            $grava->bindValue(':pnome', $nome);
+            $grava->bindValue(':pemail', $email);
+            $grava->bindValue(':ppw', $pw);
+            $grava->execute();
+            header("location: ./vendedor/infoAdicional/index.php?email=" . $email);
+
         }
+
     }
 }
 ?>
