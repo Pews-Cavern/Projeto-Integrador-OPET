@@ -1,0 +1,154 @@
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    background-color: #dcf7df;
+    height: fit-content;
+    width: fit-content;
+    padding: 30px 60px 50px 60px;
+    margin: 2% 3%;
+    border-radius: 15px;
+    position: fixed;
+    filter: drop-shadow(5px -1px 16px #000000);
+
+}
+
+img#profilePicture {
+    border-radius: 100%;
+    width: 150px;
+
+}
+
+p#nome {
+    font-weight: 900;
+}
+
+p#hastag {
+    font-weight: 400;
+}
+
+
+p#employed {
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+div.infos {
+    margin-top: 15px;
+    text-align: start;
+}
+
+p {
+    margin-top: 2px;
+    color: black;
+    font-weight: 600;
+}
+
+button#redes {
+    margin-top: 15px;
+    border-radius: 50px;
+}
+
+
+/*----*/
+main {
+    background-color: #dcf7df;
+    height: fit-content;
+    width: 100%;
+    padding-left: 400px;
+    margin-top: 10%;
+    padding-top: 25px;
+    padding-bottom: 1500px;
+}
+
+nav.navBar {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav.navBar a.navLink {
+    font-size: 30px;
+    margin-right: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+nav.navBar a.navLink.selected {
+    color: #007bff;
+}
+
+.follow-button {
+    background-color: #1DA1F2;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 0px 50px;
+    font-size: 20px;
+    margin-left: auto;
+}
+
+.follow-button:hover {
+    background-color: #0B77B1;
+}
+
+div.feed {
+    /* background-color: blue; */
+    height: 90rem;
+    width: 80%;
+    margin-top: 3%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardsPubli {
+    background-color: #dcf7df;
+    width: 100%;
+    height: 15rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: row;
+    filter: drop-shadow(5px -1px 16px #000000);
+}
+
+.iconCard {
+    border: 1 px black solid;
+    width: 14rem;
+    height: 13rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    border-radius: 2rem;
+}
+
+.buttonLike {
+    background-color: #1DA1F2;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 0px 50px;
+    font-size: 20px;
+    margin-bottom: 2.5rem;
+}
+
+.buttonLook {
+    background-color: #1DA1F2;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 0px 50px;
+    font-size: 20px;
+    margin-right: .5rem;
+    margin-bottom: 2.5rem;
+}
+
+
+.buttonsCard {
+    display: flex;
+    flex-direction: row-reverse;
+}
