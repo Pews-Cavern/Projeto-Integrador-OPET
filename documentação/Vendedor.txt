@@ -1,7 +1,7 @@
 Vendedor
 -------
 id_vendedor - int => id increase
-id_login - int => chave estrangeira do login
+email - varchar(30) => Email cadastrado no login(transferido por cookie)
 facul - varchar(30) => Nome da facul
 curso - varchar(30) => Nome do curso
 area - int  => Id da área (Ver doc)
