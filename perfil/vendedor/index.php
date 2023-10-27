@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="img/png" href="../../assets/logo.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../../css/default.css">
@@ -33,52 +33,106 @@
 
     <main>
         <nav class="navBar">
-            <a href="#" class="navLink selected" onclick="selectNavLink(event)">Teste1</a>
-            <a href="#" class="navLink" onclick="selectNavLink(event)">Teste2</a>
-            <a href="#" class="navLink" onclick="selectNavLink(event)">Teste3</a>
+            <a href="#" class="navLink selected" onclick="selectNavLink(event)">Publicações</a>
+            <a href="#" class="navLink" onclick="selectNavLink(event)">Anúncios</a>
+            <a href="#" class="navLink" onclick="selectNavLink(event)">Compras</a>
             <button class="follow-button">Anunciar</button>
         </nav>
 
         <div class="feed">
 
             <div class="cardsPubli">
-                <div class="iconCard"></div>
+                <img class="iconCard" src="../../assets/tartaruga.jpg" alt="">
+
+                <div class="infoCard">
+                    <h3 class="title">Titulo do trabalho</h3>
+                    <p>Informação do trabalho concluido</p>
+                    <ul class="avaliacao">
+                        <li class="star-icon ativo" data-avaliacao="1"></li>
+                        <li class="star-icon" data-avaliacao="2"></li>
+                        <li class="star-icon" data-avaliacao="3"></li>
+                        <li class="star-icon" data-avaliacao="4"></li>
+                        <li class="star-icon" data-avaliacao="5"></li>
+                    </ul>
+                </div>
+
             </div>
 
             <div class="buttonsCard">
                 <button class="buttonLike" >Curtir</button>
                 
-                <button class="buttonLook" >Ver mais!</button>
+                <button class="buttonLook" >Editar</button>
+            </div>
+
+           <div class="cardsPubli">
+                <img class="iconCard" src="../../assets/tartaruga.jpg" alt="">
+
+                <div class="infoCard">
+                    <h3 class="title">Titulo do trabalho</h3>
+                    <p>Informação do trabalho concluido</p>
+                    <ul class="avaliacao">
+                        <li class="star-icon ativo" data-avaliacao="1"></li>
+                        <li class="star-icon" data-avaliacao="2"></li>
+                        <li class="star-icon" data-avaliacao="3"></li>
+                        <li class="star-icon" data-avaliacao="4"></li>
+                        <li class="star-icon" data-avaliacao="5"></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="buttonsCard">
+                <button class="buttonLike" >Curtir</button>
+                
+                <button class="buttonLook" >Editar</button>
+            </div>
+
+           <div class="cardsPubli">
+                <img class="iconCard" src="../../assets/tartaruga.jpg" alt="">
+
+                <div class="infoCard">
+                    <h3 class="title">Titulo do trabalho</h3>
+                    <p>Informação do trabalho concluido</p>
+                    <ul class="avaliacao">
+                        <li class="star-icon ativo" data-avaliacao="1"></li>
+                        <li class="star-icon" data-avaliacao="2"></li>
+                        <li class="star-icon" data-avaliacao="3"></li>
+                        <li class="star-icon" data-avaliacao="4"></li>
+                        <li class="star-icon" data-avaliacao="5"></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        
+
+            <div class="buttonsCard">
+                <button class="buttonLike" >Curtir</button>
+                
+                <button class="buttonLook" >Editar</button>
             </div>
 
             <div class="cardsPubli">
-                <div class="iconCard"></div>
+                <img class="iconCard" src="../../assets/tartaruga.jpg" alt="">
+
+                <div class="infoCard">
+                    <h3 class="title">Titulo do trabalho</h3>
+                    <p>Informação do trabalho concluido</p>
+                    <ul class="avaliacao">
+                        <li class="star-icon ativo" data-avaliacao="1"></li>
+                        <li class="star-icon ativo" data-avaliacao="2"></li>
+                        <li class="star-icon ativo" data-avaliacao="3"></li>
+                        <li class="star-icon ativo" data-avaliacao="4"></li>
+                        <li class="star-icon ativo" data-avaliacao="5"></li>
+                    </ul>
+                </div>
+
             </div>
 
             <div class="buttonsCard">
                 <button class="buttonLike" >Curtir</button>
                 
-                <button class="buttonLook" >Ver mais!</button>
-            </div>
-
-            <div class="cardsPubli">
-                <div class="iconCard"></div>
-            </div>
-
-            <div class="buttonsCard">
-                <button class="buttonLike" >Curtir</button>
-                
-                <button class="buttonLook" >Ver mais!</button>
-            </div>
-
-            <div class="cardsPubli">
-                <div class="iconCard"></div>
-            </div>
-
-            <div class="buttonsCard">
-                <button class="buttonLike" >Curtir</button>
-                
-                <button class="buttonLook" >Ver mais!</button>
+                <button class="buttonLook" >Editar</button>
             </div>
 
         </div>
@@ -86,6 +140,20 @@
 
 
     <script>
+
+                var stars = document.querySelectorAll('.star-icon');
+                  
+                  document.addEventListener('click', function(e){
+                    var classStar = e.target.classList;
+                    if(!classStar.contains('ativo')){
+                      stars.forEach(function(star){
+                        star.classList.remove('ativo');
+                      });
+                      classStar.add('ativo');
+                      console.log(e.target.getAttribute('data-avaliacao'));
+                    }
+                  });
+
         function selectNavLink(event) {
             const navLinks = document.querySelectorAll('.navLink');
             navLinks.forEach(link => link.classList.remove('selected'));
