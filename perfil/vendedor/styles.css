@@ -97,20 +97,20 @@ nav.navBar a.navLink.selected {
 }
 
 div.feed {
-    /* background-color: blue; */
-    height: 90rem;
+    height: 150rem;
     width: 80%;
     margin-top: 3%;
     padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+ 
 }
 
 .cardsPubli {
     background-color: #dcf7df;
     width: 100%;
-    height: 15rem;
+    height: 30rem;
     border-radius: 3rem;
     display: flex;
     flex-direction: row;
@@ -119,11 +119,13 @@ div.feed {
 
 .iconCard {
     border: 1 px black solid;
-    width: 14rem;
-    height: 13rem;
+    width: 28rem;
+    height: 28rem;
     margin-left: 1rem;
     margin-top: 1rem;
     border-radius: 2rem;
+    border: 2px solid black;
+    background-color: rgb(112, 112, 112)
 }
 
 .buttonLike {
@@ -147,8 +149,47 @@ div.feed {
     margin-bottom: 2.5rem;
 }
 
-
 .buttonsCard {
     display: flex;
     flex-direction: row-reverse;
 }
+
+.avaliacao{
+    display: flex;
+    margin-left: 23rem;
+   }
+  .star-icon{
+    list-style-type: none;
+    border: 1px solid #fff;
+    cursor: pointer;
+    color: #ffe500;
+    font-size: 40px;
+    border: none;
+  }
+  .star-icon::before{
+    content: "\2605";
+  }
+  .star-icon.ativo ~ .star-icon::before{
+    content: "\2606";
+  }
+  .avaliacao:hover .star-icon::before{
+    content: "\2605";
+  }
+  .star-icon:hover ~ .star-icon::before{
+    content: "\2606";
+  }
+
+.infoCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.title {
+    margin-top: 2rem;
+    color: black;
+}
+
