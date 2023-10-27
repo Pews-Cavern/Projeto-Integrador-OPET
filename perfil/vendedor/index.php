@@ -33,9 +33,9 @@
 
     <main>
         <nav class="navBar">
-            <a href="#" class="navLink selected" onclick="selectNavLink(event)">Teste1</a>
-            <a href="#" class="navLink" onclick="selectNavLink(event)">Teste2</a>
-            <a href="#" class="navLink" onclick="selectNavLink(event)">Teste3</a>
+            <a href="#" class="navLink selected" onclick="selectNavLink(event)">Publicações</a>
+            <a href="#" class="navLink" onclick="selectNavLink(event)">Anúncios</a>
+            <a href="#" class="navLink" onclick="selectNavLink(event)">Compras</a>
             <button class="follow-button">Anunciar</button>
         </nav>
 
