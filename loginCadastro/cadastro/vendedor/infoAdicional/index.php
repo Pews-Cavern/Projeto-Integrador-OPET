@@ -85,9 +85,9 @@
         margin-bottom: 0.5rem !important;
         display: flex;
         align-content: center;
-        justify-content: flex-start;
         align-items: baseline;
 
+        justify-content: space-between;
     }
 
     div.myRow p {
@@ -118,6 +118,8 @@
                     <div class="form-floating mb-2 myRow">
                         <p>Nome do Curso</p>
                         <select class="selectpicker" data-live-search="true" id="major">
+                            <option>Selecione um</option>
+                            <option>Análise e Desenvolvimento de Sistemas</option>
                             <option>Ciência da Computação</option>
                             <option>Engenharia de Software</option>
                             <option>Sistemas de Informação</option>
@@ -125,11 +127,9 @@
                             <option>Segurança da Informação</option>
                             <option>Redes de Computadores</option>
                             <option>Inteligência Artificial</option>
-                            <option>Desenvolvimento Web</option>
                             <option>Engenharia Eletrônica</option>
                             <option>Engenharia de Redes</option>
                             <option>Engenharia de Computação</option>
-                            <option>Análise e Desenvolvimento de Sistemas</option>
                             <!--  -->
                             <option>Design Gráfico</option>
                             <option>Design de Produto</option>
@@ -177,31 +177,111 @@
                         </select>
                     </div>
 
-                    <div class="form-floating mb-2">
+                    <div class="form-floating mb-2 myRow">
+                        <p>Áreas de competência</p>
+                        <div id="dummy">
+                            <select class="selectpicker" multiple data-live-search="true">
+                            </select>
+                        </div>
 
-                        <select class="selectpicker" multiple data-live-search="true">
-                            <option>Mustard</option>
-                            <option>Ketchup</option>
-                            <option>Relish</option>
-                        </select>
+                        <div style="display:none" id="ti">
+                            <select class="selectpicker" multiple data-live-search="true">
+                                <option>Programação Front-End</option>
+                                <option>Programação Back-End</option>
+                                <option>Programação Mobile</option>
+                                <option>Programação de Software</option>
+                                <option>Analista de Banco de Dados</option>
+                                <option>Desenvolvedor de Jogos</option>
+                            </select>
+                        </div>
+
+                        <div style="display:none" id="design">
+
+                            <select class="selectpicker" multiple data-live-search="true">
+                                <option>Design Gráfico</option>
+                                <option>Design de Interface de Usuário (UI)</option>
+                                <option>Design de Experiência do Usuário (UX)</option>
+                                <option>Design de Produto</option>
+                                <option>Design de Interação</option>
+                                <option>Design de Ilustração</option>
+                                <option>Design de Embalagens</option>
+                                <option>Design de Identidade Visual</option>
+                                <option>Design de Sites</option>
+                                <option>Design de Aplicativos Móveis</option>
+                            </select>
+                        </div>
+
+
+                        <div style="display:none" id="marketing">
+
+                            <select class="selectpicker" multiple data-live-search="true">
+                                <option>Marketing Digital</option>
+                                <option>Marketing de Conteúdo</option>
+                                <option>Publicidade Online</option>
+                                <option>Estratégia de Marketing</option>
+                                <option>Marketing de Mídias Sociais</option>
+                                <option>SEO (Otimização de Mecanismos de Busca)</option>
+                                <option>E-mail Marketing</option>
+                                <option>Marketing de Influência</option>
+                            </select>
+                        </div>
+
+                        <div style="display:none" id="nutricao">
+
+                            <select class="selectpicker" multiple data-live-search="true">
+                                <option>Nutrição Clínica</option>
+                                <option>Nutrição Esportiva</option>
+                                <option>Nutrição Infantil</option>
+                                <option>Nutrição Vegana/Vegetariana</option>
+                                <option>Nutrição para Emagrecimento</option>
+                                <option>Nutrição para Idosos</option>
+                            </select>
+                        </div>
+
+
+
+                        <div style="display:none" id="audiovisuais">
+                            <select style="display:none" id="audiovisuais" class="selectpicker" multiple
+                                data-live-search="true">
+                                <option>Produção de Vídeos</option>
+                                <option>Edição de Vídeos</option>
+                                <option>Produção de Áudio</option>
+                                <option>Animação</option>
+                                <option>Fotografia</option>
+                                <option>Pós-Produção</option>
+                            </select>
+                        </div>
+
+
+                        <div style="display:none" id="publicidade">
+                            <select class="selectpicker" multiple data-live-search="true">
+                                <option>Publicidade Tradicional</option>
+                                <option>Planejamento de Campanhas</option>
+                                <option>Estratégia de Anúncios</option>
+                                <option>Criatividade Publicitária</option>
+                                <option>Marketing Promocional</option>
+                                <option>Outdoor e Mídia Impressa</option>
+                            </select>
+                        </div>
+
+
+                        <div style="display:none" id="jornalismo">
+                            <select class="selectpicker" multiple data-live-search="true">
+                                <option>Jornalismo de Investigação</option>
+                                <option>Jornalismo de Dados</option>
+                                <option>Jornalismo Esportivo</option>
+                                <option>Jornalismo de Moda</option>
+                                <option>Reportagem Política</option>
+                                <option>Jornalismo Cultural</option>
+                            </select>
+                        </div>
+
+
+
                     </div>
 
-                    <!-- <div class="form-floating mb-2">
-                        <input type="Checkbox" class="form-control" name="subArea" id="subArea"
-                            placeholder="Especialidade" required pattern="^[A-Za-z ]+$"
-                            title="Apenas letras e espaços são permitidos.">
-                        <label for="subArea">
-                            <p class="place">Especialidade</p>
-                        </label>
-                    </div> -->
-                    <div class="form-floating mb-2">
-                        <select class="form-select" name="subArea" multiple aria-label="multiple select example">
-                            <option>Especialidades :</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </div>
+
+
 
                     <div class="form-floating mb-2">
                         <input type="date" class="form-control" name="inicioCurso" id="inicioCurso"
@@ -243,9 +323,9 @@
                     <div class="form-floating mb-2">
                         <select class="form-select" name="genero" aria-label="multiple select example">
                             <option selected>Gênero :</option>
-                            <option value="1">Homen</option>
-                            <option value="2">Mulher</option>
-                            <option value="3">Outros</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Feminino</option>
+                            <option value="3">Outro</option>
                         </select>
                     </div>
 
@@ -285,6 +365,7 @@
         courseSelect.addEventListener("change", function () {
             const selectedOption = courseSelect.options[courseSelect.selectedIndex].text;
             const majorToID = {
+                'Selecione um': 0,
                 'Ciência da Computação': 1,
                 'Engenharia de Software': 1,
                 'Sistemas de Informação': 1,
@@ -314,10 +395,100 @@
                 'Publicidade e Propaganda': 3,
                 'Comunicação Social com ênfase em Marketing': 3,
                 'Nutrição': 4,
+                'Produção de Vídeos': 5,
+                'Edição de Vídeos': 5,
+                'Produção de Áudio': 5,
+                'Animação': 5,
+                'Fotografia': 5,
+                'Pós-Produção': 5,
+                'Publicidade Tradicional': 6,
+                'Planejamento de Campanhas': 6,
+                'Estratégia de Anúncios': 6,
+                'Criatividade Publicitária': 6,
+                'Marketing Promocional': 6,
+                'Outdoor e Mídia Impressa': 6,
+                'Jornalismo de Investigação': 7,
+                'Jornalismo de Dados': 7,
+                'Jornalismo Esportivo': 7,
+                'Jornalismo de Moda': 7,
+                'Reportagem Política': 7,
+                'Jornalismo Cultural': 7,
             };
 
+
+            const areaSubareaMap = {
+                0: ["Selecione um"],
+                1: [
+                    "Programação Front-End",
+                    "Programação Back-End",
+                    "Programação Mobile",
+                    "Programação de Software",
+                    "Analista de Banco de Dados",
+                    "Desenvolvedor de Jogos",
+                ],
+                2: [
+                    "Design Gráfico",
+                    "Design de Interface de Usuário (UI)",
+                    "Design de Experiência do Usuário (UX)",
+                    "Design de Produto",
+                    "Design de Interação",
+                    "Design de Ilustração",
+                    "Design de Embalagens",
+                    "Design de Identidade Visual",
+                    "Design de Sites",
+                    "Design de Aplicativos Móveis",
+                ],
+                3: [
+                    "Marketing Digital",
+                    "Marketing de Conteúdo",
+                    "Publicidade Online",
+                    "Estratégia de Marketing",
+                    "Marketing de Mídias Sociais",
+                    "SEO (Otimização de Mecanismos de Busca)",
+                    "E-mail Marketing",
+                    "Marketing de Influência",
+                ],
+                4: [
+                    "Nutrição Clínica",
+                    "Nutrição Esportiva",
+                    "Nutrição Infantil",
+                    "Nutrição Vegana/Vegetariana",
+                    "Nutrição para Emagrecimento",
+                    "Nutrição para Idosos",
+                ],
+                5: [
+                    "Produção de Vídeos",
+                    "Edição de Vídeos",
+                    "Produção de Áudio",
+                    "Animação",
+                    "Fotografia",
+                    "Pós-Produção",
+                ],
+                6: [
+                    "Publicidade Tradicional",
+                    "Planejamento de Campanhas",
+                    "Estratégia de Anúncios",
+                    "Criatividade Publicitária",
+                    "Marketing Promocional",
+                    "Outdoor e Mídia Impressa",
+                ],
+                7: [
+                    "Jornalismo de Investigação",
+                    "Jornalismo de Dados",
+                    "Jornalismo Esportivo",
+                    "Jornalismo de Moda",
+                    "Reportagem Política",
+                    "Jornalismo Cultural",
+                ],
+            };
             const majorID = majorToID[selectedOption];
-            console.log(`Major ID for ${selectedOption}: ${majorID}`);
+            const ids = ["dummy", "ti", "design", "marketing", "nutricao", "audiovisuais", "publicidade", "jornalismo"];
+            for (var divs of ids) {
+                document.getElementById(divs).style.display = "none";
+
+            }
+            console.log(majorID)
+            document.getElementById(ids[majorID]).style.display = "block";
 
         });
     </script>
@@ -340,7 +511,6 @@ $errType = false;
 
 
 if (isset($_POST['gravar'])) {
-
     $faculdade = $_POST['faculdade'];
     $curso = $_POST['curso'];
     $area = $_POST['area'];
@@ -351,8 +521,8 @@ if (isset($_POST['gravar'])) {
     $cidade = $_POST['cidade'];
     $genero = $_POST['genero'];
     $nascimento = $_POST['nascimento'];
-    $email = $_COOKIE['email']; //<- Certo
-   
+    $email = $_COOKIE['email']; //<- Tá Certo assim
+
     $grava = $conn->prepare('INSERT INTO `infovendedor` (`id_vend`, `email`, `faculdade`, `curso`, `area`, `subArea`, `inicioCurso`, `finalCurso`, `buscandoEmprego`, `cidade`, `genero`, `nascimento`) VALUES (NULL, :email, :faculdade, :curso, :area, :subArea, :inicioCurso, :finalCurso, :buscandoEmprego, :cidade, :genero, :nascimento)');
 
     $grava->bindValue(":faculdade", $faculdade);
