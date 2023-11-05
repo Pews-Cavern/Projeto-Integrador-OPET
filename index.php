@@ -151,9 +151,9 @@
 
 
     .algumaImg {
-        border-top-right-radius: .8rem;
-        border-bottom-right-radius: .8rem;
-
+        border-top-right-radius: .2rem;
+        border-bottom-right-radius: .3rem;
+        height: 250px;
         box-shadow: 1px .5px 10px black;
     }
 
@@ -282,7 +282,9 @@
     <div class="bottomText">
         <p>Acreditamos que cada estudante merece acesso simplificado a oportunidades profissionais relevantes e
             enriquecedoras. <br> Participe conosco dessa jornada entre jovens talentos e o mundo profissional!</p>
-        <img class="algumaImg" src="https://fakeimg.pl/250x150/?retina=1&text=Input Image Here">
+        <img class="algumaImg"
+            src="https://img.freepik.com/free-photo/framing-selfie_155003-21289.jpg?w=900&t=st=1699208492~exp=1699209092~hmac=9cb9073b0c01c78b5d1d2e028e09f7a0306d4a03c75e4c73548e3b16d5f96e06">
+
     </div>
     <div class="cardsBottom">
         <div class="rowTop">
@@ -500,24 +502,17 @@
             </div>
             <div class="infoFooter">
                 <p>WEBSITE</p>
-                <a href="./index.php">Home</a>
-                <a href="./loginCadastro/index.php">Login | Cadastro</a>
-                <a href="./blog/index.php">Blog</a>
+                <a href="./index.php">HOME</a>
+                <a href="./loginCadastro/index.php">Login</a>
+                <a href="./loginCadastro/index.php">Cadastro</a>
             </div>
             <div class="infoFooter">
                 <p>INSTITUCIONAL</p>
-                <a href="./">Quem somos</a>
+                <a href="./about/index.php">Quem somos</a>
                 <a href="./">Equipe</a>
                 <a href="./">Contato</a>
             </div>
-            <div class="infoFooter">
-                <p>PRIVACIDADE & USO</p>
-                <a href="./">Termos de Uso</a>
-                <a href="./">Perguntas frequentes</a>
-                <a href="./">Política de privacidade</a>
-                <a href="./">Política de cookies</a>
-            </div>
-
+          
         </div>
         <div class="direitos">
             <p>© 2023 Projetos do Futuro. Todos os direitos reservados.</p>

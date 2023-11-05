@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+session_start();
+if (!isset($_SESSION['login'])) {
+    header("location: login.php");
+}
+include "../../util/config.php";
+$consulta = $conn->prepare('SELECT * FROM login
+WHERE id_log=:id');
+$consulta->bindValue(":id", $_SESSION['login']);
+$consulta->execute();
+$row = $consulta->fetch();
+?>
+
 
 <head>
     <meta charset="UTF-8">
@@ -118,7 +131,7 @@
     }
 </style>
 
-<body>
+<body onload="init()">
 
 
     <aside>
@@ -126,8 +139,6 @@
             alt="profilePicture" id="profilePicture">
         <div class="infos">
             <p id="nome">Paulo E. Konopka</p>
-            <p id="hastag">@PauloKonopka</p>
-
             <p id="employed">Procurando Emprego</p>
             <p id="facul">UniOpet</p>
             <p id="area">Programador</p>
@@ -153,6 +164,13 @@
 
 
     <script>
+        function init() {
+            const user = {
+                name: "<?php echo $row['nome_log']; ?>",
+            }
+            document.getElementById("nome").innerText = user.name;
+        }
+
         function selectNavLink(event) {
             const navLinks = document.querySelectorAll('.navLink');
             navLinks.forEach(link => link.classList.remove('selected'));
@@ -162,7 +180,7 @@
 
 
         const defaultJson = {
-            
+
         }
         function createCard(json) {
 
@@ -172,6 +190,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>

@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+session_start();
+session_destroy();
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -110,7 +114,7 @@ if (isset($_POST['logar'])) {
 ?>
 
 <script>
-    console.log(<?php echo $err ?>);
+    // console.log(<?php echo $err ?>);
 </script>
 
 </html>
