@@ -37,11 +37,7 @@ CREATE TABLE `chat` (
 -- Despejando dados para a tabela `chat`
 --
 
-INSERT INTO `chat` (`id_message`, `content`, `author`) VALUES
-(22, 'Pew', 'Teste'),
-(23, 'Pew', 'Aoba'),
-(24, 'PewDizinho', 'Teste de mensagem'),
-(25, 'PewDizinho', 'Teste de mensagem');
+INSERT INTO `chat` (`id_message`, `content`, `author`);
 
 -- --------------------------------------------------------
 
@@ -68,8 +64,7 @@ CREATE TABLE `infovendedor` (
 -- Despejando dados para a tabela `infovendedor`
 --
 
-INSERT INTO `infovendedor` (`id_vend`, `email`, `faculdade`, `curso`, `area`, `subArea`, `inicioCurso`, `finalCurso`, `buscandoEmprego`, `cidade`, `genero`, `nascimento`) VALUES
-(1, 'paulokonopka@gmail.com', 'Uniopet', 'Engenharia de Software', '1', '0,1,2', '2023-12-02', '2023-11-23', 0, 'Curitiba', '1', '2023-11-15');
+INSERT INTO `infovendedor` (`id_vend`, `email`, `faculdade`, `curso`, `area`, `subArea`, `inicioCurso`, `finalCurso`, `buscandoEmprego`, `cidade`, `genero`, `nascimento`);
 
 -- --------------------------------------------------------
 
@@ -88,8 +83,7 @@ CREATE TABLE `login` (
 -- Despejando dados para a tabela `login`
 --
 
-INSERT INTO `login` (`id_log`, `nome_log`, `email_log`, `pw_log`) VALUES
-(44, 'Paulo Eduardo Konopka', 'paulokonopka@gmail.com', '25d55ad283aa400af464c76d713c07ad');
+INSERT INTO `login` (`id_log`, `nome_log`, `email_log`, `pw_log`) ;
 
 -- --------------------------------------------------------
 
