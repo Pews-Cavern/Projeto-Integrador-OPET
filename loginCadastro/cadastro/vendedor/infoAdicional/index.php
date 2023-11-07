@@ -76,9 +76,9 @@
     }
 
     div.form-check {
-        background-color: white;
-        border-radius: 30px;
-        border-style: inset;
+        font-size: larger;
+        font-weight: 700;
+        text-align: center;
     }
 
     div.myRow {
@@ -94,6 +94,12 @@
         margin-right: 15px;
         font-size: larger;
         font-weight: 700;
+    }
+
+    div.genderSelect {
+        background-color: white;
+        border-radius: 30px;
+        border-style: inset;
     }
 </style>
 
@@ -314,18 +320,20 @@
                     </div>
 
                     <!-- <div class="form-floating mb-2">
-                        <input type="select" class="form-control" name="curso" id="curso" placeholder="Curso" required
-                            pattern="^[A-Za-z ]+$" title="Apenas letras e espaços são permitidos.">
-                        <label for="curso">
-                            <p class="place">Gênero</p>
-                        </label>
-                    </div> -->
-                    <div class="form-floating mb-2">
                         <select class="form-select" name="genero" aria-label="multiple select example">
                             <option selected>Gênero :</option>
                             <option value="1">Masculino</option>
                             <option value="2">Feminino</option>
                             <option value="3">Outro</option>
+                        </select>
+                    </div> -->
+                    <div class="form-floating mb-2 myRow">
+                        <p>Seu Gênero</p>
+                        <select class="selectpicker" data-live-search="true" id="major">
+                            <option>Selecione um</option>
+                            <option>Masculino</option>
+                            <option>Feminino</option>
+                            <option>Outro</option>
                         </select>
                     </div>
 
@@ -342,6 +350,7 @@
                             id="flexSwitchCheckDefault">
                         <label class="form-check-label" for="flexSwitchCheckDefault">Buscando Emprego ?</label>
                     </div>
+
                     <input class="btn btn-primary mt-3 mx-auto" type="submit" value="Cadastrar" name="gravar"
                         id="button" required>
 
