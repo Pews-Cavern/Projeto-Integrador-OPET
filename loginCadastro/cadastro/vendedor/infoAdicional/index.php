@@ -319,21 +319,13 @@
                         </label>
                     </div>
 
-                    <!-- <div class="form-floating mb-2">
-                        <select class="form-select" name="genero" aria-label="multiple select example">
-                            <option selected>Gênero :</option>
-                            <option value="1">Masculino</option>
-                            <option value="2">Feminino</option>
-                            <option value="3">Outro</option>
-                        </select>
-                    </div> -->
                     <div class="form-floating mb-2 myRow">
                         <p>Seu Gênero</p>
-                        <select class="selectpicker" data-live-search="true" id="major">
+                        <select class="selectpicker" data-live-search="true" id="genero" name="genero">
                             <option>Selecione um</option>
-                            <option>Masculino</option>
-                            <option>Feminino</option>
-                            <option>Outro</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Outro">Outro</option>
                         </select>
                     </div>
 
