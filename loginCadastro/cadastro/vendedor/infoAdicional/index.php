@@ -337,10 +337,18 @@
                         </label>
                     </div>
 
-                    <div class="form-check form-switch">
+                    <!-- <div class="form-check form-switch">
                         <input class="form-check-input" name="buscandoEmprego" type="checkbox" role="switch"
                             id="flexSwitchCheckDefault">
                         <label class="form-check-label" for="flexSwitchCheckDefault">Buscando Emprego ?</label>
+                    </div> -->
+                    <div class="form-floating mb-2 myRow">
+                        <p>Buscando Emprego?</p>
+                        <select class="selectpicker" data-live-search="true" id="buscandoEmprego" name="buscandoEmprego">
+                            <option>Selecione um</option>
+                            <option value="1">Sim</option>
+                            <option value="0">Não</option>
+                        </select>
                     </div>
 
                     <input class="btn btn-primary mt-3 mx-auto" type="submit" value="Cadastrar" name="gravar"
