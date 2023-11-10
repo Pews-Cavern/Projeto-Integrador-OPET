@@ -76,9 +76,9 @@
     }
 
     div.form-check {
-        background-color: white;
-        border-radius: 30px;
-        border-style: inset;
+        font-size: larger;
+        font-weight: 700;
+        text-align: center;
     }
 
     div.myRow {
@@ -94,6 +94,12 @@
         margin-right: 15px;
         font-size: larger;
         font-weight: 700;
+    }
+
+    div.genderSelect {
+        background-color: white;
+        border-radius: 30px;
+        border-style: inset;
     }
 </style>
 
@@ -313,19 +319,13 @@
                         </label>
                     </div>
 
-                    <!-- <div class="form-floating mb-2">
-                        <input type="select" class="form-control" name="curso" id="curso" placeholder="Curso" required
-                            pattern="^[A-Za-z ]+$" title="Apenas letras e espaços são permitidos.">
-                        <label for="curso">
-                            <p class="place">Gênero</p>
-                        </label>
-                    </div> -->
-                    <div class="form-floating mb-2">
-                        <select class="form-select" name="genero" aria-label="multiple select example">
-                            <option selected>Gênero :</option>
-                            <option value="1">Masculino</option>
-                            <option value="2">Feminino</option>
-                            <option value="3">Outro</option>
+                    <div class="form-floating mb-2 myRow">
+                        <p>Seu Gênero</p>
+                        <select class="selectpicker" data-live-search="true" id="genero" name="genero">
+                            <option>Selecione um</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Outro">Outro</option>
                         </select>
                     </div>
 
@@ -337,11 +337,20 @@
                         </label>
                     </div>
 
-                    <div class="form-check form-switch">
+                    <!-- <div class="form-check form-switch">
                         <input class="form-check-input" name="buscandoEmprego" type="checkbox" role="switch"
                             id="flexSwitchCheckDefault">
                         <label class="form-check-label" for="flexSwitchCheckDefault">Buscando Emprego ?</label>
+                    </div> -->
+                    <div class="form-floating mb-2 myRow">
+                        <p>Buscando Emprego?</p>
+                        <select class="selectpicker" data-live-search="true" id="buscandoEmprego" name="buscandoEmprego">
+                            <option>Selecione um</option>
+                            <option value="1">Sim</option>
+                            <option value="0">Não</option>
+                        </select>
                     </div>
+
                     <input class="btn btn-primary mt-3 mx-auto" type="submit" value="Cadastrar" name="gravar"
                         id="button" required>
 

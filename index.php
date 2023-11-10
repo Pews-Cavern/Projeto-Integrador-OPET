@@ -180,7 +180,7 @@
 
     div.infoFooter {
         color: white;
-        font-family: Montserrat;
+        font-family: 'Montserrat';
         font-style: normal;
         display: flex;
         flex-direction: column;
@@ -208,7 +208,6 @@
         background-color: #222222;
         text-align: center;
         padding: 0px 0px 1px 0px;
-        height: 2rem;
     }
 
     a {
@@ -512,7 +511,7 @@
                 <a href="./">Equipe</a>
                 <a href="./">Contato</a>
             </div>
-          
+
         </div>
         <div class="direitos">
             <p>© 2023 Projetos do Futuro. Todos os direitos reservados.</p>
